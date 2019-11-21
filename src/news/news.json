@@ -1,0 +1,4 @@
+{
+  "permalink": "/news/{{ page.fileSlug }}/index.html",
+  "layout": "layouts/news.njk"
+}

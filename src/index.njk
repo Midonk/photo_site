@@ -1,0 +1,14 @@
+{# layout to extend #}
+{% extends "layouts/base.njk" %}
+
+{# set variables #}
+{% set htmlTitle = "Hello World" %}
+
+{% block content %}
+    {% for item in collections.news %}
+        <p><a href="{{ item.url }}">{{ item.data.title }}</a></p>
+    {% endfor %}
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, assumenda, beatae doloribus eius expedita
+        fugiat id iure molestiae nesciunt perferendis quaerat quibusdam quo repellendus sequi tempore vel velit vitae
+        voluptate?</p>
+{% endblock %}

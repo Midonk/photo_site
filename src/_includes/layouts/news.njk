@@ -1,0 +1,12 @@
+{# layout to extend #}
+{% extends "layouts/base.njk" %}
+
+{# set variables #}
+{% set htmlTitle = title %}
+
+{% block content %}
+    <p>Le bon template</p>
+    <h1>{{ title }}</h1>
+    <p>{{ content | safe }}</p>
+
+{% endblock %}

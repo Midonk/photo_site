@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ htmlTitle ~ " - " if htmlTitle }}{{ site.title }}</title>
+    <meta type="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    {% block content %}{% endblock %}
+    {% include "partials/sitefooter.njk" %}
+    <script src="/assets/js/bundle.js"></script>
+</body>
+</html>
