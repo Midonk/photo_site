@@ -1,0 +1,24 @@
+$map-media-queries: (
+        "small": (
+                "query": "all and (min-width:500px)",
+                "grid-flag": true
+        ),
+        "medium": (
+                "query": "all and (min-width:750px)",
+                "grid-flag": true
+        )
+) !default;
+
+
+@mixin mq($name) {
+  @if (not map-has_key($map-media-queries, $name)) {
+    @error "#{$name} is not a valid media query name in $map-media-queries";
+  } @else {
+    $values: map-get($map-media-queries, $name);
+    $query: map-get($values, "query");
+
+    @media #{$query} {
+      @content
+    }
+  }
+}

@@ -1,3 +1,10 @@
-body{
-  color: black;
-}
+@import "settings/_colors.scss";
+@import "settings/_fonts.scss";
+
+@import "mixins/_media-queries.scss";
+
+@import "base/_fonts.scss";
+@import "base/_html.scss";
+@import "base/_body.scss";
+
+@import "layouts/_grids.scss";
