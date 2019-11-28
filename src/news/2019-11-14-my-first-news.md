@@ -2,4 +2,4 @@
 title: "En voici une news qu'elle est magnifique, hein ?"
 image: "monimage.jpg"
 ---
-This is the content of a news
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacus est, lobortis et dignissim eu, aliquet vitae nisi. Sed eget est molestie, finibus eros egestas, elementum purus. Etiam sit amet

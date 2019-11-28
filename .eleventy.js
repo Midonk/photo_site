@@ -17,7 +17,7 @@ module.exports = function(eleventyConfig) {
     });
 
     // copy images in assets (rest handled by build tools)
-    eleventyConfig.addPassthroughCopy("src/assets/img/");
+    // eleventyConfig.addPassthroughCopy("src/assets/img/");
 
     // modify core config
     return {
