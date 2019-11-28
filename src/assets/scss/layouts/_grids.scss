@@ -1,0 +1,47 @@
+// ------------------------------
+// default settings
+// ------------------------------
+
+$grid-gap: 24px !default;
+
+$map-media-queries: (
+        "small": (
+                "query": "all and (min-width:500px)",
+                "grid-flag": true
+        ),
+        "medium": (
+                "query": "all and (min-width:750px)",
+                "grid-flag": true
+        )
+) !default;
+
+// ------------------------------
+// grid base styles
+// ------------------------------
+
+.l-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $grid-gap;
+}
+
+@for $i from 2 through 4 {
+  .l-grid--#{$i}cols {
+    grid-template-columns: repeat(#{$i}, 1fr);
+  }
+}
+
+// ------------------------------
+// grid rwd styles
+// ------------------------------
+
+@each $breakpoint-name, $breakpoint-values in $map-media-queries {
+  @include mq($breakpoint-name) {
+    @for $i from 2 through 4 {
+      .l-grid--#{$i}cols\@#{$breakpoint-name} {
+        grid-template-columns: repeat(#{$i}, 1fr);
+      }
+    }
+  }
+}
+
