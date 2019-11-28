@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ htmlTitle ~ " - " if htmlTitle }}{{ site.title }}</title>
-    <meta type="description" content="{{ site.description }}">
+    <meta type="description" content="{{ htmlDesc if htmlDesc else site.description }}">
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
+    {% include "partials/siteheader.njk" %}
+
     {% block content %}{% endblock %}
+
     {% include "partials/sitefooter.njk" %}
     <script src="/assets/js/bundle.js"></script>
 </body>

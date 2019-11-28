@@ -1,0 +1,25 @@
+[
+  {
+    "id": "home",
+    "label": "accueil",
+    "url": "/"
+  },
+
+  {
+    "id": "news",
+    "label": "Actualités",
+    "url": "/actualites/"
+  },
+
+  {
+    "id": "about",
+    "label": "À propos",
+    "url": "/a-propos/"
+  },
+
+  {
+    "id": "galleries",
+    "label": "Galeries",
+    "url": "/galeries/"
+  }
+]

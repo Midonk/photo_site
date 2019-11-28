@@ -1,0 +1,29 @@
+---
+permalink: "./galeries/index.html"
+---
+
+{# layouts extend #}
+{% extends "layouts/base.njk" %}
+
+{# set variables #}
+{% set htmlTitle = "Gallerie d'images" %}
+{% set htmlDesc = "Ceci est une description" %}
+
+{% block content %}
+    <h1>Galleries</h1>
+    {% for item in collections.galleries %}
+        {% if loop.first %}
+            <ul>
+        {% endif %}
+            <li>
+                <article>
+                    <img src="/assets/img/galleries/_600xauto/{{ item.data.coverImage }}" alt="{{ item.data.title }}">
+                    <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+                    {{ item.templateContent | safe }}
+                </article>
+            </li>
+        {% if loop.last %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

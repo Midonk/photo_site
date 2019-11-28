@@ -1,0 +1,26 @@
+{% extends "layouts/base.njk" %}
+
+{% set htmlTitle = title %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+
+    {% for img in images %}
+        {% if loop.first %}
+            <ul class="l-grid  l-grid--3cols@medium  l-grid--3cols@large">
+        {% endif %}
+            <li>
+                <img src="/assets/img/galleries/_600xauto/{{ img }}"
+                     srcset="/assets/img/galleries/_600xauto/{{ img }} 600w,
+                             /assets/img/galleries/_1024xauto/{{ img }} 1024w,
+                             /assets/img/galleries/{{ img }} 1200w"
+                     sizes="100vw"
+                     class="o-fluidimage"
+                     alt="">
+            </li>
+        {% if loop.last %}
+            </ul>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,24 @@
+---
+permalink: "./actualites/index.html"
+---
+
+{# layouts to extend #}
+{% extends "layouts/base.njk" %}
+
+{# set variables #}
+{% set htmlTitle = "Dernières actualités" %}
+{% set htmlDesc = "Voici les dernières actualités blablabla" %}
+
+{% block content %}
+    <h1>Actualités</h1>
+    {% for news in collections.news %}
+        {% if loop.first %}<ul>{% endif %}
+            <li>
+                <article>
+                    <h2><a href="{{ news.url }}">{{ news.data.title }}</a></h2>
+                    <p>{{ news.data.intro }}</p>
+                </article>
+            </li>
+        {% if loop.last %}</ul>{% endif %}
+    {% endfor %}
+{% endblock %}

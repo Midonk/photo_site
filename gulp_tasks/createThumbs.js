@@ -15,19 +15,17 @@ const sharp = require("sharp");
 const transforms = [
     {
         src: "src/assets/img/galleries",
-        dist: "dist/assets/img/galleries/_600x600",
+        dist: "dist/assets/img/galleries/_600xauto",
         options: {
             width: 600,
-            height: 600,
             resize: "fit",
         }
     },
     {
         src: "src/assets/img/galleries",
-        dist: "dist/assets/img/galleries/_200x200",
+        dist: "dist/assets/img/galleries/_1024xauto",
         options: {
-            width: 200,
-            height: 200,
+            width: 1024,
             resize: "fit",
         }
     }

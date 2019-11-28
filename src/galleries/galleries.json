@@ -1,0 +1,4 @@
+{
+  "permalink": "/galleries/{{ page.fileSlug }}/index.html",
+  "layout": "layouts/galleries.njk"
+}

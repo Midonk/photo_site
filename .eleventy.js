@@ -16,6 +16,10 @@ module.exports = function(eleventyConfig) {
         return collection.getFilteredByGlob("./src/news/*.md");
     });
 
+    eleventyConfig.addCollection("galleries", function(collection) {
+        return collection.getFilteredByGlob("./src/galleries/*.md");
+    });
+
     // copy images in assets (rest handled by build tools)
     // eleventyConfig.addPassthroughCopy("src/assets/img/");
 
