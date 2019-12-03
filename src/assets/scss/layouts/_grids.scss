@@ -29,6 +29,10 @@ $map-media-queries: (
   gap: $grid-gap;
 }
 
+.l-grid--row-dense{
+  grid-auto-flow: row dense;
+}
+
 @for $i from 2 through 4 {
   .l-grid--#{$i}cols {
     grid-template-columns: repeat(#{$i}, 1fr);

@@ -5,11 +5,11 @@ body {
   min-height: 100vh;
   background-color: $color-brand-main;
   color: $color-white;
-
+/*
   @include mq(small) {
     background-color: red;
   }
   @include mq(medium) {
     background-color: green;
-  }
+  }*/
 }

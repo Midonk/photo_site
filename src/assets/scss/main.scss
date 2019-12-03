@@ -1,12 +1,31 @@
 @import "settings/_colors.scss";
 @import "settings/_fonts.scss";
 
+@import "functions/pixelsToRems.scss";
+@import "functions/div.scss";
+
 @import "mixins/_media-queries.scss";
 
 @import "base/_fonts.scss";
 @import "base/_html.scss";
 @import "base/_body.scss";
+@import "base/_ul.scss";
+@import "base/_a.scss";
+@import "base/_titles.scss";
+@import "base/_text.scss";
 
 @import "objects/_fluidimages.scss";
 
 @import "layouts/_grids.scss";
+@import "layouts/_pagecontainer.scss";
+@import "layouts/_widthConstrain.scss";
+
+@import "components/_titles.scss";
+@import "components/_text.scss";
+@import "components/_splash-screen.scss";
+@import "components/_welcome-screen.scss";
+@import "components/_news-item.scss";
+@import "components/_news-details.scss";
+@import "components/_sitefooter.scss";
+
+@import "utilities/_center-item.scss";

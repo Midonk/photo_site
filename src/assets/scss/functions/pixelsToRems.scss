@@ -1,0 +1,13 @@
+@function pix2rem($pixels){
+  @if($pixels == 0){
+    @return 0;
+  }
+
+  @if(unit($pixels) == "px"){
+    @return $pixels / 16px * 1rem;
+  }
+
+  @else {
+    @error "La valeur passée dans la fonction pix2rem doit être en pixels";
+  }
+}

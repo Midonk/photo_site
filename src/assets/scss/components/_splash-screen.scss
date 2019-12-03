@@ -1,0 +1,27 @@
+.splash__maintitle{
+  position: relative;
+  margin-bottom: pix2rem(72px);
+
+  &::after{
+    position: absolute;
+    content: "";
+    width: 42px;
+    bottom: -36px;
+    left: calc(50% - (42px/2));
+    height: 2px;
+    background-color: $color-white;
+
+    opacity: 0.5;
+  }
+}
+
+.splash__subtitle{
+  margin-bottom: pix2rem(6px);
+}
+
+.splash__nav{
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: pix2rem(96px) auto 0;
+}

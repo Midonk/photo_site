@@ -12,6 +12,11 @@ const dirsToCopy = [
     {
         src: "src/assets/img/",
         dist: "dist/assets/img/"
+    },
+
+    {
+        src: "src/assets/fonts/",
+        dist: "dist/assets/fonts/"
     }
 ];
 

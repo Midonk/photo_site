@@ -1,0 +1,16 @@
+.l-page-container{
+  min-height: calc(100vh - 60px);
+
+  &--veryHighMargin{
+    margin: 0 auto;
+    margin-top: pix2rem(144px);
+  }
+
+  &--highMargin{
+    margin-top: pix2rem(60px);
+  }
+
+  &--lowMargin{
+    margin-top: pix2rem(30px);
+  }
+}

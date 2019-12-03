@@ -1,0 +1,37 @@
+.text{
+  font-family: $fontstack-main;
+  font-size: pix2rem(14px);
+  font-weight: 300;
+  font-style: normal;
+
+
+  &-common{
+    font-family: $fontstack-main;
+    font-size: pix2rem(14px);
+    font-weight: 300;
+    font-style: normal;
+    line-height: div(24, 14);
+
+    opacity: 0.75;
+  }
+
+  &-intro{
+    font-family: $fontstack-main;
+    font-size: pix2rem(14px);
+    font-weight: 300;
+    font-style: normal;
+    line-height: div(18, 14);
+
+    opacity: 0.75;
+  }
+
+  &-navlink{
+    font-family: $fontstack-main;
+    font-size: pix2rem(16px);
+    font-weight: 300;
+    font-style: normal;
+    line-height: div(18, 16);
+
+    opacity: 0.75;
+  }
+}

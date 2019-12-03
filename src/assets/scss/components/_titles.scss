@@ -1,0 +1,51 @@
+.c-h1{
+  font-family: $fontstack-main;
+  font-size: pix2rem(48px);
+  font-weight: 300;
+  font-style: normal;
+  line-height: div(48, 48);
+}
+
+.c-h2{
+  font-family: $fontstack-main;
+  font-size: pix2rem(24px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: div(24, 24);
+
+  margin-bottom: pix2rem(30px);
+}
+
+.c-h3{
+  font-family: $fontstack-main;
+  font-size: pix2rem(18px);
+  font-weight: 500;
+  font-style: normal;
+  line-height: div(24, 18);
+}
+
+.c-h-news{
+  font-family: $fontstack-main;
+  font-size: pix2rem(18px);
+  font-weight: 500;
+  font-style: normal;
+  line-height: div(24, 18);
+  margin-bottom: pix2rem(24px);
+
+  &--preview{
+    font-size: pix2rem(14px);
+    font-weight: 500;
+    font-style: normal;
+    line-height: div(18, 14);
+
+    margin-bottom: pix2rem(12px);
+  }
+}
+
+.c-h-gallerymodel{
+  font-family: $fontstack-main;
+  font-size: pix2rem(21px);
+  font-weight: 500;
+  font-style: normal;
+  line-height: div(24, 21);
+}
