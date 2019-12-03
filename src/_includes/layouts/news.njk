@@ -3,10 +3,16 @@
 
 {# set variables #}
 {% set htmlTitle = title %}
+{% set activNavElement = "news" %}
 
 {% block content %}
-    <p>Le bon template</p>
-    <h1>{{ title }}</h1>
-    <p>{{ content | safe }}</p>
-
+    <main class="l-page-container l-page-container--lowMargin">
+        <img class="news-image" src="/assets/img/page_banners/{{ image }}" alt="{{ title }}">
+        <div class="widthConstrain center-elements">
+            <h3 class="c-h-news">{{ title }}</h3>
+            <p class="text-common">{{ content | safe }}</p>     <!--Problème de classe car le contenu est déjà encapsulé dans de l'html => pas de prise en charge de la classe-->
+            <p class="text-common">Modèle: {{ modele }}</p>       <!--Problème de filtre...-->
+            <p><a href="">Voir les photos</a></p>
+        </div>
+    </main>
 {% endblock %}

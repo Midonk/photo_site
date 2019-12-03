@@ -8,17 +8,29 @@ permalink: "./actualites/index.html"
 {# set variables #}
 {% set htmlTitle = "Dernières actualités" %}
 {% set htmlDesc = "Voici les dernières actualités blablabla" %}
+{% set activNavElement = "news" %}
 
 {% block content %}
-    <h1>Actualités</h1>
-    {% for news in collections.news %}
-        {% if loop.first %}<ul>{% endif %}
-            <li>
-                <article>
-                    <h2><a href="{{ news.url }}">{{ news.data.title }}</a></h2>
-                    <p>{{ news.data.intro }}</p>
-                </article>
+    <main class="l-page-container l-page-container--lowMargin">
+        <div class="center-elements widthConstrain">
+            <h2 class="c-h2">Actualités</h2>
+        </div>
+
+        {% for news in collections.news %}
+            {% if loop.first %}
+                <ul class="news-list">
+            {% endif %}
+            <li class="">
+                <a class="news-item" href="{{ news.url }}">
+                    <article class="news-container">
+                        <p class="news-date">{{ news.date | dateFormat("DD / MM / YYYY") }}</p>
+                        <h3 class="c-h-news c-h-news--preview">{{ news.data.title }}</h3>
+                        <!--<p class="text-intro">{{ news.data.intro }}</p>-->
+                    </article>
+                    <img class="news-thumb" src="/assets/img/page_banners/{{ news.data.image }}" alt="{{ news.data.title }}">
+                </a>
             </li>
-        {% if loop.last %}</ul>{% endif %}
-    {% endfor %}
+            {% if loop.last %}</ul>{% endif %}
+        {% endfor %}
+    </main>
 {% endblock %}

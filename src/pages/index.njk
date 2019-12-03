@@ -3,16 +3,13 @@ permalink: "./index.html"
 ---
 
 {# layouts to extend #}
-{% extends "layouts/base.njk" %}
-
-{# set variables #}
-{% set htmlTitle = "Hello World" %}
+{% extends "layouts/base_less.njk" %}
 
 {% block content %}
-    {% for item in collections.news %}
-        <p><a href="{{ item.url }}">{{ item.data.title }}</a></p>
-    {% endfor %}
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, assumenda, beatae doloribus eius expedita
-        fugiat id iure molestiae nesciunt perferendis quaerat quibusdam quo repellendus sequi tempore vel velit vitae
-        voluptate?</p>
+    <main class="l-page-container l-page-container--veryHighMargin centered-text widthConstrain">
+        <h1 class="c-h1 splash__maintitle centered-text">Thomas Finet</h1>
+        <h3 class="c-h3 splash__subtitle ">Photographe</h3>
+        <p class="text-intro ">Contraste, émotion et lumière. </p>
+        <a class="splash__nav" href="/accueil/index.html"><img class="o-fluidimage" src="/assets/img/nav_arrow.svg" alt="navigation arrow"></a>
+    </main>
 {% endblock %}

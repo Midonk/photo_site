@@ -1,5 +1,5 @@
 ---
-title: "Valentine la ..."
+title: "Valentine Peltier"
 coverImage: "val_portrait.jpg"
 images:
 - "val_1.jpg"
@@ -10,6 +10,7 @@ images:
 - "val_6.jpg"
 - "val_8.jpg"
 - "val_7.jpg"
+- "val_8.jpg"
 ---
 
-Description de la gallerie test me
+Description de la gallerie de Valentine

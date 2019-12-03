@@ -8,13 +8,15 @@ permalink: "./galeries/index.html"
 {# set variables #}
 {% set htmlTitle = "Gallerie d'images" %}
 {% set htmlDesc = "Ceci est une description" %}
+{% set activNavElement = "galleries" %}
 
 {% block content %}
-    <h1>Galleries</h1>
-    {% for item in collections.galleries %}
-        {% if loop.first %}
-            <ul>
-        {% endif %}
+    <main class="l-page-container l-page-container--lowMargin">
+        <h1>Galleries</h1>
+        {% for item in collections.galleries %}
+            {% if loop.first %}
+                <ul>
+            {% endif %}
             <li>
                 <article>
                     <img src="/assets/img/galleries/_600xauto/{{ item.data.coverImage }}" alt="{{ item.data.title }}">
@@ -22,8 +24,9 @@ permalink: "./galeries/index.html"
                     {{ item.templateContent | safe }}
                 </article>
             </li>
-        {% if loop.last %}
-            </ul>
-        {% endif %}
-    {% endfor %}
+            {% if loop.last %}
+                </ul>
+            {% endif %}
+        {% endfor %}
+    </main>
 {% endblock %}

@@ -1,0 +1,32 @@
+---
+permalink: "./accueil/index.html"
+---
+
+{# layouts to extend #}
+{% extends "layouts/base_less.njk" %}
+
+{% set activNavElement = "home" %}
+
+{% block content %}
+    <main class="centered-text l-page-container l-page-container--highMargin widthConstrain center-elements">
+        <img class="welcome-logo" src="../assets/img/logo.svg" alt="Thomas photography logo">
+        <h2 class="c-h2">Accueil</h2>
+        <p class="welcome-intro text-intro">Choisissez une rubrique qui vous intéresse et laissez vous emporter par mon univers</p>
+
+        <nav>
+            {% for navitem in nav %}
+                {% if loop.first %}
+                    <ul class="welcome-nav">
+                {% else %}
+                <li>
+                    <a class="welcome-navlink" href="{{ navitem.url }}">{{ navitem.label }}</a>
+                </li>
+                {% endif %}
+
+                {% if loop.last %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </nav>
+    </main>
+{% endblock %}

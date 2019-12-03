@@ -3,7 +3,7 @@
         {% if loop.first %}
             <ul>
         {% endif %}
-            <li>
+            <li style="{{ "font-weight: 600" if activNavElement == navitem.id }}">
                 <a href="{{ navitem.url }}">{{ navitem.label }}</a>
             </li>
         {% if loop.last %}

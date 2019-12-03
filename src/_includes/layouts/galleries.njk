@@ -1,15 +1,19 @@
 {% extends "layouts/base.njk" %}
 
 {% set htmlTitle = title %}
+{% set htmlDesc = title %}
+
+{% set activNavElement = "galleries" %}
 
 {% block content %}
-    <h1>{{ title }}</h1>
-    {{ content | safe }}
+    <main class="l-page-container l-page-container--lowMargin">
+        <h1>{{ title }}</h1>
+        {{ content | safe }}
 
-    {% for img in images %}
-        {% if loop.first %}
-            <ul class="l-grid  l-grid--3cols@medium  l-grid--3cols@large">
-        {% endif %}
+        {% for img in images %}
+            {% if loop.first %}
+                <ul class="l-grid  l-grid--3cols@medium  l-grid--3cols@large l-grid--row-dense">
+            {% endif %}
             <li>
                 <img src="/assets/img/galleries/_600xauto/{{ img }}"
                      srcset="/assets/img/galleries/_600xauto/{{ img }} 600w,
@@ -19,8 +23,9 @@
                      class="o-fluidimage"
                      alt="">
             </li>
-        {% if loop.last %}
-            </ul>
-        {% endif %}
-    {% endfor %}
+            {% if loop.last %}
+                </ul>
+            {% endif %}
+        {% endfor %}
+    </main>
 {% endblock %}
