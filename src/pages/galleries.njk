@@ -12,15 +12,17 @@ permalink: "./galeries/index.html"
 
 {% block content %}
     <main class="l-page-container l-page-container--lowMargin">
-        <h1>Galleries</h1>
+        <h2 class="c-h2 c-galleries__main-title">Galleries</h2>
         {% for item in collections.galleries %}
             {% if loop.first %}
-                <ul>
+                <ul class="c-galleries__list">
             {% endif %}
             <li>
                 <article>
-                    <img src="/assets/img/galleries/_600xauto/{{ item.data.coverImage }}" alt="{{ item.data.title }}">
-                    <h2><a href="{{ item.url }}">{{ item.data.title }}</a></h2>
+                    <a href="{{ item.url }}">
+                        <img class="o-fluidimage" src="/assets/img/galleries/_600xauto/{{ item.data.coverImage }}" alt="{{ item.data.title }}">
+                        <h2 class="c-galleries__gallery-title">{{ item.data.title }}</h2>
+                    </a>
                     {{ item.templateContent | safe }}
                 </article>
             </li>

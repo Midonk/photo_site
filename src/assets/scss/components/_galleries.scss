@@ -1,0 +1,17 @@
+.c-galleries__list{
+  max-width: pix2rem(600px);
+  margin: 0 auto;
+
+  & > li:not(:last-child){
+    margin-bottom:pix2rem(42px);
+  }
+}
+
+.c-galleries__main-title{
+  margin-bottom: pix2rem(24px);
+}
+
+.c-galleries__gallery-title{
+  margin-top: pix2rem(24px);
+  margin-bottom: pix2rem(12px);
+}

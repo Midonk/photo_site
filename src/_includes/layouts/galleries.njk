@@ -10,15 +10,15 @@
         <h1>{{ title }}</h1>
         {{ content | safe }}
 
-        {% for img in images %}
+        {% for item in images %}
             {% if loop.first %}
-                <ul class="l-grid  l-grid--3cols@medium  l-grid--3cols@large l-grid--row-dense">
+                <ul class="c-photosgrid">
             {% endif %}
-            <li>
-                <img src="/assets/img/galleries/_600xauto/{{ img }}"
-                     srcset="/assets/img/galleries/_600xauto/{{ img }} 600w,
-                             /assets/img/galleries/_1024xauto/{{ img }} 1024w,
-                             /assets/img/galleries/{{ img }} 1200w"
+            <li class="c-photosgrid__item  {{ "c-photosgrid__item--large" if item.format == "portrait" }}">
+                <img src="/assets/img/galleries/_600xauto/{{ item.file }}"
+                     srcset="/assets/img/galleries/_600xauto/{{ item.file }} 600w,
+                             /assets/img/galleries/_1024xauto/{{ item.file }} 1024w,
+                             /assets/img/galleries/{{ item.file }} 1200w"
                      sizes="100vw"
                      class="o-fluidimage"
                      alt="">

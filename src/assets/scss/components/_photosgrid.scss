@@ -1,0 +1,19 @@
+.c-photosgrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 24px;
+}
+
+.c-photosgrid__item--large {
+  grid-row: span 2;
+}
+
+.c-photosgrid__item > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

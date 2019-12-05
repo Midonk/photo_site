@@ -2,9 +2,19 @@ body {
   margin: 0;
   padding: 0;
 
-  min-height: 100vh;
   background-color: $color-brand-main;
   color: $color-white;
+  //overflow-y: hidden;
+
+  & p{
+    font-family: $fontstack-main;
+    font-size: pix2rem(14px);
+    font-weight: 300;
+    font-style: normal;
+    line-height: div(24, 14);
+
+    opacity: 0.75;
+  }
 /*
   @include mq(small) {
     background-color: red;

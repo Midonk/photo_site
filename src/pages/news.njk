@@ -18,9 +18,9 @@ permalink: "./actualites/index.html"
 
         {% for news in collections.news %}
             {% if loop.first %}
-                <ul class="news-list">
+                <ul class="news-list full-width">
             {% endif %}
-            <li class="">
+            <li>
                 <a class="news-item" href="{{ news.url }}">
                     <article class="news-container">
                         <p class="news-date">{{ news.date | dateFormat("DD / MM / YYYY") }}</p>

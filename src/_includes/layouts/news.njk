@@ -6,13 +6,29 @@
 {% set activNavElement = "news" %}
 
 {% block content %}
-    <main class="l-page-container l-page-container--lowMargin">
-        <img class="news-image" src="/assets/img/page_banners/{{ image }}" alt="{{ title }}">
-        <div class="widthConstrain center-elements">
+{#    <main class="l-page-container l-page-container--lowMargin">
+        <div class="full-width">
+            <img class="news-image" src="/assets/img/page_banners/{{ image }}" alt="{{ title }}">
+        </div>
+        <div class="center-elements">
             <h3 class="c-h-news">{{ title }}</h3>
             <p class="text-common">{{ content | safe }}</p>     <!--Problème de classe car le contenu est déjà encapsulé dans de l'html => pas de prise en charge de la classe-->
             <p class="text-common">Modèle: {{ modele }}</p>       <!--Problème de filtre...-->
             <p><a href="">Voir les photos</a></p>
+        </div>
+    </main>#}
+
+    <main class="l-page-container l-page-container--lowMargin">
+        <div class="c-news-detail">
+            <div class="c-news-detail__header full-width">
+                <img class="c-news-detail__img o-fluidimage" src="/assets/img/page_banners/{{ image }}" alt="{{ title }}">
+            </div>
+            <div class="c-news-detail__content">
+                <h3 class="c-h3  c-h3--news c-news-detail__title">{{ title }}</h3>
+                {{ content | safe }}
+                <p class="c-news-detail__model">Modèle: {{ modele }}</p>
+                <p class="c-nav-highlight"><a class="c-nav-highlight__link" href="{{ externalLink }}">Voir les photos</a></p>
+            </div>
         </div>
     </main>
 {% endblock %}

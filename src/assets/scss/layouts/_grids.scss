@@ -9,11 +9,17 @@ $map-media-queries: (
                 "query": "all and (min-width:500px)",
                 "grid-flag": true
         ),
+
         "medium": (
                 "query": "all and (min-width:750px)",
                 "grid-flag": true
+        ),
+
+        "large": (
+                "query": "all and (min-width:1024px)",
+                "grid-flag": true
         )
-) !default;
+);
 
 // ------------------------------
 // grid base styles
