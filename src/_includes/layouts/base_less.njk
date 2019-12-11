@@ -6,7 +6,8 @@
     <meta type="description" content="{{ htmlDesc if htmlDesc else site.description }}">
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body>
+<body class="{{ "l-split-layout" if  activNavElement == "home"}}">
+    {% block header %}{% endblock %}
     {% block content %}{% endblock %}
     <script src="/assets/js/bundle.js"></script>
 </body>

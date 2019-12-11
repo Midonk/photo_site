@@ -18,10 +18,12 @@
 
 @import "layouts/_grids.scss";
 @import "layouts/_pagecontainer.scss";
-@import "layouts/_widthConstrain.scss";
+@import "layouts/_split-layout.scss";
 
 @import "components/_titles.scss";
 @import "components/_text.scss";
+@import "components/_siteheader.scss";
+@import "components/_sitebanner.scss";
 @import "components/_splash-screen.scss";
 @import "components/_welcome-screen.scss";
 @import "components/_news-item.scss";
@@ -29,5 +31,6 @@
 @import "components/_sitefooter.scss";
 @import "components/_galleries.scss";
 @import "components/_photosgrid.scss";
+@import "components/_news-card.scss";
 
 @import "utilities/_center-item.scss";

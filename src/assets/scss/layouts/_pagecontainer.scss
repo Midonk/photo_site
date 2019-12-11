@@ -1,4 +1,4 @@
-.l-page-container{
+.l-vertical-spacing{
   max-width: 71.25%;
   margin-left: auto;
   margin-right: auto;
@@ -9,12 +9,28 @@
   }
 
   &--highMargin{
-    margin-top: pix2rem(60px);
+    margin-top: pix2rem(42px);
     min-height: calc(100vh - 60px);
   }
 
   &--lowMargin{
     margin-top: pix2rem(30px);
     min-height: calc(100vh - 30px);
+  }
+}
+
+.l-container{
+  max-width: pix2rem(800px);
+  margin-left: pix2rem(24px);
+  margin-right: pix2rem(24px);
+
+  @include mq(medium){
+    margin-left: pix2rem(60px);
+    margin-right: pix2rem(60px);
+  }
+
+  @include mq(large){
+    margin-left: pix2rem(90px);
+    margin-right: pix2rem(90px);
   }
 }

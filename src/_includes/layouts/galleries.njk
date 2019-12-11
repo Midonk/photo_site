@@ -1,31 +1,37 @@
-{% extends "layouts/base.njk" %}
+{% extends "layouts/base_less.njk" %}
 
 {% set htmlTitle = title %}
 {% set htmlDesc = title %}
 
 {% set activNavElement = "galleries" %}
 
-{% block content %}
-    <main class="l-page-container l-page-container--lowMargin">
-        <h1>{{ title }}</h1>
-        {{ content | safe }}
+{% block header %}
+    {% include "partials/siteheader.njk" %}
+{% endblock %}
 
-        {% for item in images %}
-            {% if loop.first %}
-                <ul class="c-photosgrid">
-            {% endif %}
-            <li class="c-photosgrid__item  {{ "c-photosgrid__item--large" if item.format == "portrait" }}">
-                <img src="/assets/img/galleries/_600xauto/{{ item.file }}"
-                     srcset="/assets/img/galleries/_600xauto/{{ item.file }} 600w,
+{% block content %}
+    <main>
+        <div class="">
+            <h1>{{ title }}</h1>
+            {{ content | safe }}
+
+            {% for item in images %}
+                {% if loop.first %}
+                    <ul class="c-photosgrid">
+                {% endif %}
+                <li class="c-photosgrid__item  {{ "c-photosgrid__item--large" if item.format == "portrait" }}">
+                    <img src="/assets/img/galleries/_600xauto/{{ item.file }}"
+                         srcset="/assets/img/galleries/_600xauto/{{ item.file }} 600w,
                              /assets/img/galleries/_1024xauto/{{ item.file }} 1024w,
                              /assets/img/galleries/{{ item.file }} 1200w"
-                     sizes="100vw"
-                     class="o-fluidimage"
-                     alt="">
-            </li>
-            {% if loop.last %}
-                </ul>
-            {% endif %}
-        {% endfor %}
+                         sizes="100vw"
+                         class="o-fluidimage"
+                         alt="">
+                </li>
+                {% if loop.last %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
     </main>
 {% endblock %}

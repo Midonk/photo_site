@@ -13,6 +13,11 @@
     line-height: div(24, 14);
 
     opacity: 0.75;
+
+    @include mq(medium){
+      font-size: pix2rem(20px);
+      line-height: div(30, 20);
+    }
   }
 
   &-intro{
@@ -23,6 +28,11 @@
     line-height: div(18, 14);
 
     opacity: 0.75;
+
+    @include mq(medium){
+      font-size: pix2rem(20px);
+      line-height: div(30, 20);
+    }
   }
 
   &-navlink{
@@ -33,5 +43,25 @@
     line-height: div(18, 16);
 
     opacity: 0.75;
+  }
+
+  &-news{
+    &-date{
+      font-family: $fontstack-main;
+      font-size: pix2rem(11px);
+      font-weight: 500;
+      font-style: normal;
+      line-height: div(18, 11);
+
+      opacity: 0.42;
+    }
+
+    &-title{
+      font-family: $fontstack-main;
+      font-size: pix2rem(16px);
+      font-weight: 400;
+      font-style: normal;
+      line-height: div(24, 16);
+    }
   }
 }

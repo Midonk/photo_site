@@ -11,24 +11,30 @@ permalink: "./galeries/index.html"
 {% set activNavElement = "galleries" %}
 
 {% block content %}
-    <main class="l-page-container l-page-container--lowMargin">
-        <h2 class="c-h2 c-galleries__main-title">Galleries</h2>
-        {% for item in collections.galleries %}
-            {% if loop.first %}
-                <ul class="c-galleries__list">
-            {% endif %}
-            <li>
-                <article>
-                    <a href="{{ item.url }}">
-                        <img class="o-fluidimage" src="/assets/img/galleries/_600xauto/{{ item.data.coverImage }}" alt="{{ item.data.title }}">
-                        <h2 class="c-galleries__gallery-title">{{ item.data.title }}</h2>
-                    </a>
-                    {{ item.templateContent | safe }}
-                </article>
-            </li>
-            {% if loop.last %}
-                </ul>
-            {% endif %}
-        {% endfor %}
+    <div class="c-sitebanner">
+        <img class="c-sitebanner__img" src="../assets/img/page_banners/banner.jpg" alt="Site-banner">
+    </div>
+
+    <main class="">
+        <div class="l-container">
+            <h2 class="c-h2 c-galleries__main-title">Galleries</h2>
+            {% for item in collections.galleries %}
+                {% if loop.first %}
+                    <ul class="c-galleries__list">
+                {% endif %}
+                <li>
+                    <article>
+                        <a href="{{ item.url }}">
+                            <img class="o-fluidimage" src="/assets/img/galleries/_600xauto/{{ item.data.coverImage }}" alt="{{ item.data.title }}">
+                            <h2 class="c-galleries__gallery-title">{{ item.data.title }}</h2>
+                        </a>
+                        {{ item.templateContent | safe }}
+                    </article>
+                </li>
+                {% if loop.last %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
     </main>
 {% endblock %}

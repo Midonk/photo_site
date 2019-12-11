@@ -1,0 +1,5 @@
+.l-split-layout{
+  @include mq(medium){
+    margin-left: 40%;
+  }
+}

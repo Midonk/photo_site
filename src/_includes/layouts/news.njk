@@ -18,11 +18,12 @@
         </div>
     </main>#}
 
-    <main class="l-page-container l-page-container--lowMargin">
+    <div class="c-sitebanner">
+        <img class="c-sitebanner__img" src="/assets/img/page_banners/{{ image }}" alt="{{ title }}">
+    </div>
+
+    <main class="l-container">
         <div class="c-news-detail">
-            <div class="c-news-detail__header full-width">
-                <img class="c-news-detail__img o-fluidimage" src="/assets/img/page_banners/{{ image }}" alt="{{ title }}">
-            </div>
             <div class="c-news-detail__content">
                 <h3 class="c-h3  c-h3--news c-news-detail__title">{{ title }}</h3>
                 {{ content | safe }}

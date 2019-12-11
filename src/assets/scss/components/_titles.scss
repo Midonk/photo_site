@@ -6,6 +6,11 @@
   line-height: div(48, 48);
 
   opacity: 1;
+
+  @include mq(medium){
+    font-size: pix2rem(72px);
+    line-height: div(72, 72);
+  }
 }
 
 .c-h2{
@@ -15,8 +20,13 @@
   font-style: normal;
   line-height: div(24, 24);
 
+  margin-top: pix2rem(48px);
   margin-bottom: pix2rem(30px);
   opacity: 1;
+
+  @include mq(medium){
+    margin-top: pix2rem(18px);
+  }
 }
 
 .c-h3{
@@ -26,6 +36,11 @@
   font-style: normal;
   line-height: div(24, 18);
   opacity: 1;
+
+  @include mq(medium){
+    font-size: pix2rem(36px);
+    line-height: div(42, 36);
+  }
 }
 
 .c-h-news{

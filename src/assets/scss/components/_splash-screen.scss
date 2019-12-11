@@ -12,6 +12,16 @@
     background-color: $color-white;
 
     opacity: 0.5;
+
+    @include mq(medium){
+      left: calc(50% - (84px/2));
+      width: pix2rem(84px);
+      bottom: -12px;
+    }
+  }
+
+  @include mq(medium){
+    margin-bottom: pix2rem(30px);
   }
 }
 
@@ -24,4 +34,12 @@
   width: 48px;
   height: 48px;
   margin: pix2rem(96px) auto 0;
+}
+
+.splash-container{
+  margin-top: pix2rem(114px);
+
+  @include mq(medium){
+    margin-top: pix2rem(270px);
+  }
 }

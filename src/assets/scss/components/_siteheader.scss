@@ -1,0 +1,25 @@
+.c-siteheader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: pix2rem(30px);
+  margin-bottom: pix2rem(30px);
+
+  @include mq(medium){
+    margin-top: pix2rem(72px);
+    margin-bottom: pix2rem(72px);
+  }
+}
+
+.c-nav{
+  &__logo {
+    height: pix2rem(42px);
+    width: pix2rem(42px);
+  }
+
+  &__hamburger{
+    height: pix2rem(18px);
+  }
+}

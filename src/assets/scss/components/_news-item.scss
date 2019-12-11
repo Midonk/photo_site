@@ -1,4 +1,4 @@
-.news-list{
+/*.news-list{
   //width: 100%;
 
   & > li:not(:last-child){
@@ -37,4 +37,9 @@
   width: 43.125vw;
   object-fit: cover;
 }
+*/
 
+.c-news-list__intro{
+  margin-bottom: pix2rem(36px);
+  width: 100%;
+}

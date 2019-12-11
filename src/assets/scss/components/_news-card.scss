@@ -1,0 +1,46 @@
+.c-news-card{
+  display: block;
+  width: 100%;
+  margin-bottom: pix2rem(36px);
+
+  &__img-container {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: calc(100% - 36px);
+      width: 77.94%;
+      height: pix2rem(36px);
+      background-color: $color-brand-main;
+    }
+  }
+
+  &__img{
+    display: block;
+    width: 100%;
+    height: pix2rem(180px);
+    object-fit: cover;
+  }
+
+  &__date{
+    margin-top: -18px;
+  }
+
+  &__title{
+    margin-top: 6px;
+  }
+
+  @include mq(medium){
+    height: pix2rem(208px);
+  }
+}
+
+.c-news-card__list{
+  @include mq(medium){
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: 33px;
+  }
+}

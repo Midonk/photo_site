@@ -1,7 +1,17 @@
 .welcome-{
   &logo{
+    display: block;
     width: pix2rem(60px);
-    margin-bottom: pix2rem(30px);
+    margin-top: pix2rem(42px);
+    margin-right: auto;
+    margin-bottom: pix2rem(42px);
+    margin-left: auto;
+
+    @include mq(medium){
+      margin-top: pix2rem(120px);
+      margin-bottom: pix2rem(60px);
+      width: pix2rem(150px);
+    }
   }
 
   &intro{
@@ -9,10 +19,17 @@
   }
 
   &nav{
-    margin-top: pix2rem(54px);
+    margin-top: pix2rem(42px);
+    max-width: pix2rem(228px);
+    margin-left: auto;
+    margin-right: auto;
 
     &> li:not(:last-child){
-      margin-bottom: pix2rem(36px);
+      margin-bottom: pix2rem(18px);
+    }
+
+    @include mq(medium){
+      margin-top: pix2rem(120px);
     }
   }
 
@@ -21,7 +38,6 @@
     width: 100%;
     padding: pix2rem(12px) 0;
     box-sizing: border-box;
-    margin: 0 auto;
 
     background-color: $color-brand-lighter;
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
