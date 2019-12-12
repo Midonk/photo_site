@@ -1,5 +1,6 @@
-.sitefooter{
-  margin: 0 auto;
+.c-sitefooter{
   padding-top: pix2rem(30px);
   padding-bottom: pix2rem(12px);
+
+  border-top: solid rgba($color-white, 0.1) 1px;
 }

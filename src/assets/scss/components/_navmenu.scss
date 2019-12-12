@@ -1,0 +1,35 @@
+.c-navmenu {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: pix2rem(30px) pix2rem(24px) ;
+  background-color: red;
+  z-index: 999;
+
+  transform: translate3d(0, -100vh, 0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.c-navmenu__top {
+  padding: pix2rem(10px) 0;
+  background-color: yellow;
+  text-align: right;
+}
+
+.c-navmenu__close {
+  display: inline-block;
+  background-color: green;
+  border: none;
+  padding: pix2rem(10px);
+}
+
+.c-navmenu__content {
+  margin-top: 200px;
+}
+
+.c-navmenu.is-active {
+  transform: translate3d(0, 0, 0);
+}

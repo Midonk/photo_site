@@ -1,3 +1,2 @@
-import {init} from "./modules/test";
-
-init();
+import {init as nav} from "./modules/nav";
+nav();

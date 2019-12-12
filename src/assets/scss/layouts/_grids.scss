@@ -19,7 +19,7 @@ $map-media-queries: (
                 "query": "all and (min-width:1024px)",
                 "grid-flag": true
         )
-);
+) !default;
 
 // ------------------------------
 // grid base styles

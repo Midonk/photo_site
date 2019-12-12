@@ -1,0 +1,7 @@
+.c-page-intro{
+  margin-bottom: pix2rem(36px);
+
+  @include mq(xlarge){
+    margin-right: 20%;
+  }
+}

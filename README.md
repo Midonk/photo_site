@@ -9,7 +9,24 @@
 
 You're now ready to go !
 
-## Commands:
+## Gulp command:
+**default or build**
+Simply build the site staticly
+```text
+gulp
+
+or
+
+gulp build
+```
+
+**watch**
+Build the site (without delete it first) and run it on the browserSync
+```text
+gulp watch
+```
+
+## Commands npm (OLD):
 **build:11ty :**
 Build the site via SSG 11ty in quiet mode
 ```text

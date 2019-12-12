@@ -10,5 +10,9 @@ $map-media-queries: (
         "large": (
                 "query": "all and (min-width:1024px)",
                 "grid-flag": true
+        ),
+        "xlarge": (
+                "query": "all and (min-width:1200px)",
+                "grid-flag": false
         )
 );

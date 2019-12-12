@@ -1,10 +1,10 @@
-.c-news-card{
-  display: block;
+.c-news-card {
   width: 100%;
-  margin-bottom: pix2rem(36px);
 
   &__img-container {
     position: relative;
+    padding-top: 66.66667%;
+
     &::after {
       position: absolute;
       content: "";
@@ -16,31 +16,36 @@
     }
   }
 
-  &__img{
-    display: block;
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: pix2rem(180px);
+    height: 100%;
     object-fit: cover;
   }
 
-  &__date{
+  &__date {
     margin-top: -18px;
+    margin-right: 22.06%;
   }
 
-  &__title{
+  &__title {
     margin-top: 6px;
+    margin-right: 22.06%;
   }
 
-  @include mq(medium){
-    height: pix2rem(208px);
+  &__link {
+    display: block;
   }
 }
 
-.c-news-card__list{
-  @include mq(medium){
-    min-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-    gap: 33px;
+.c-news-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 33px;
+
+  @include mq(medium) {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }

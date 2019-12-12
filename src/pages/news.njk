@@ -11,32 +11,37 @@ permalink: "./actualites/index.html"
 {% set activNavElement = "news" %}
 
 {% block content %}
-    <main class="c-sitecontent">
+    <main>
         <div class="c-sitebanner">
             <img class="c-sitebanner__img" src="/assets/img/page_banners/banner.jpg" alt="site- banner">
         </div>
 
-        <div class="l-container">
-            <h2 class="c-h2">Actualités</h2>
-            <p class="c-news-list__intro">Intro Lorem ipsum dolor sit amet, consectetulacus sodales. Vestibulum in alielit. Praesent dictum fermentum risus, non pellentesque urna sodales vitae. Curabitur pretium tellus ut ex maximus tristique. Praesent congue varius ultricies. Vestibulum rhoncus metus mauris, a consectetur tellus venenatis quis.</p>
+        <div class="c-sitecontent">
+            <div class="l-container">
+                <h2 class="c-h2">Actualités</h2>
+                <p class="c-page-intro">Intro Lorem ipsum dolor sit amet, consectetulacus sodales. Vestibulum in
+                    alielit. Praesent dictum fermentum risus, non pellentesque urna sodales vitae. Curabitur pretium
+                    tellus ut ex maximus tristique. Praesent congue varius ultricies. Vestibulum rhoncus metus mauris, a
+                    consectetur tellus venenatis quis.</p>
 
-            {% for news in collections.news %}
-                {% if loop.first %}
-                    <ul class="c-news-card__list">
-                {% endif %}
-                <li>
-                    <a class="c-news-card" href="{{ news.url }}">
-                        <article class="">
-                            <div class="c-news-card__img-container">
-                                <img class="c-news-card__img" src="/assets/img/page_banners/{{ news.data.image }}" alt="{{ news.data.title }}">
-                            </div>
-                            <p class="c-news-card__date text-news-date">{{ news.date | dateFormat("DD / MM / YYYY") }}</p>
-                            <h3 class="text-news-title c-news-card__title">{{ news.data.title }}</h3>
+                {% for news in collections.news %}
+                    {% if loop.first %}
+                        <ul class="c-news-list">
+                    {% endif %}
+                    <li>
+                        <article class="c-news-card">
+                            <a class="c-news-card__link" href="{{ news.url }}">
+                                <div class="c-news-card__img-container">
+                                    <img class="c-news-card__img" src="/assets/img/page_banners/{{ news.data.image }}" alt="{{ news.data.title }}">
+                                </div>
+                                <p class="c-news-card__date text-news-date">{{ news.date | dateFormat("DD / MM / YYYY") }}</p>
+                                <h3 class="text-news-title c-news-card__title">{{ news.data.title }}</h3>
+                            </a>
                         </article>
-                    </a>
-                </li>
-                {% if loop.last %}</ul>{% endif %}
-            {% endfor %}
+                    </li>
+                    {% if loop.last %}</ul>{% endif %}
+                {% endfor %}
+            </div>
         </div>
     </main>
 {% endblock %}

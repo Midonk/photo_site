@@ -6,18 +6,6 @@
 {% set activNavElement = "news" %}
 
 {% block content %}
-{#    <main class="l-page-container l-page-container--lowMargin">
-        <div class="full-width">
-            <img class="news-image" src="/assets/img/page_banners/{{ image }}" alt="{{ title }}">
-        </div>
-        <div class="center-elements">
-            <h3 class="c-h-news">{{ title }}</h3>
-            <p class="text-common">{{ content | safe }}</p>     <!--Problème de classe car le contenu est déjà encapsulé dans de l'html => pas de prise en charge de la classe-->
-            <p class="text-common">Modèle: {{ modele }}</p>       <!--Problème de filtre...-->
-            <p><a href="">Voir les photos</a></p>
-        </div>
-    </main>#}
-
     <div class="c-sitebanner">
         <img class="c-sitebanner__img" src="/assets/img/page_banners/{{ image }}" alt="{{ title }}">
     </div>
