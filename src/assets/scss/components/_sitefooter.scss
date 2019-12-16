@@ -3,4 +3,17 @@
   padding-bottom: pix2rem(12px);
 
   border-top: solid rgba($color-white, 0.1) 1px;
+
+  font-size: pix2rem(11px);
+  font-weight: 300;
+  line-height: div(12, 11);
+
+  opacity: 0.75;
+
+  &__nav>li>a{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    display: inline-block;
+  }
 }

@@ -12,9 +12,8 @@ permalink: "./actualites/index.html"
 
 {% block content %}
     <main>
-        <div class="c-sitebanner">
-            <img class="c-sitebanner__img" src="/assets/img/page_banners/banner.jpg" alt="site- banner">
-        </div>
+
+        {% include "partials/sitebanner.njk" %}
 
         <div class="c-sitecontent">
             <div class="l-container">
@@ -32,7 +31,13 @@ permalink: "./actualites/index.html"
                         <article class="c-news-card">
                             <a class="c-news-card__link" href="{{ news.url }}">
                                 <div class="c-news-card__img-container">
-                                    <img class="c-news-card__img" src="/assets/img/page_banners/{{ news.data.image }}" alt="{{ news.data.title }}">
+                                    <img src="/assets/img/news_illu/{{ news.data.image }}"
+                                         srcset="/assets/img/news_illu/_600xauto/{{ news.data.image }} 600w,
+                                                 /assets/img/news_illu/_1024xauto/{{ news.data.image }} 1024w,
+                                                 /assets/img/news_illu/{{ news.data.image }} 1200w"
+                                         sizes="800px"
+                                         class="c-news-card__img"
+                                         alt="{{ news.data.title }}-img">
                                 </div>
                                 <p class="c-news-card__date text-news-date">{{ news.date | dateFormat("DD / MM / YYYY") }}</p>
                                 <h3 class="text-news-title c-news-card__title">{{ news.data.title }}</h3>

@@ -1,10 +1,10 @@
 <div class="c-navmenu  js-navmenu">
-    <p class="c-navmenu__top"><button class="c-navmenu__close  js-toggle-menu">close</button></p>
+    <p class="c-navmenu__top"><a class="c-navmenu__close js-toggle-menu" href=""><img src="/assets/img/closenav.svg" alt="close"></a></p>
     <nav class="c-navmenu__content">
-        <ul class="c-mainnav">
-            <li class="c-mainnav__item"><a class="c-mainnav__link" href="#">Actualités</a></li>
-            <li class="c-mainnav__item"><a class="c-mainnav__link" href="#">A propos</a></li>
-            <li class="c-mainnav__item"><a class="c-mainnav__link" href="#">Galeries</a></li>
-        </ul>
+        {% for navitem in nav %}
+            {% if loop.first %} <ul> {% endif %}
+            <li class="c-mainnav__item"><a class="c-mainnav__link {{ "c-mainnav__link--hightlighted" if activNavElement == navitem.id }}" href="{{ navitem.url }}">{{ navitem.label }}</a></li>
+            {% if loop.last %} </ul> {% endif %}
+        {% endfor %}
     </nav>
 </div>

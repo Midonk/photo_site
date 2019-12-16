@@ -1,11 +1,5 @@
 [
   {
-    "id": "home",
-    "label": "accueil",
-    "url": "/accueil/"
-  },
-
-  {
     "id": "news",
     "label": "Actualités",
     "url": "/actualites/"

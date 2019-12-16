@@ -28,6 +28,38 @@ const transforms = [
             width: 1024,
             resize: "fit",
         }
+    },
+    {
+        src: "src/assets/img/news_illu",
+        dist: "dist/assets/img/news_illu/_600xauto",
+        options: {
+            width: 600,
+            resize: "fit",
+        }
+    },
+    {
+        src: "src/assets/img/news_illu",
+        dist: "dist/assets/img/news_illu/_1024xauto",
+        options: {
+            width: 1024,
+            resize: "fit",
+        }
+    },
+    {
+        src: "src/assets/img/page_banners",
+        dist: "dist/assets/img/page_banners/_600xauto",
+        options: {
+            width: 600,
+            resize: "fit",
+        }
+    },
+    {
+        src: "src/assets/img/page_banners",
+        dist: "dist/assets/img/page_banners/_1024xauto",
+        options: {
+            width: 1024,
+            resize: "fit",
+        }
     }
 ];
 

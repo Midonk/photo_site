@@ -1,7 +1,7 @@
 ---
 title: "Couleurs d’automne et langueur monotone"
 intro: "this is the sound of C"
-image: "cha_banner.jpg"
+image: "marie_1.jpg"
 modele: "Marie Clerbois"
 externalLink: "/galleries/marie/index.html"
 ---

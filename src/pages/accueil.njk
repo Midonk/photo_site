@@ -14,30 +14,29 @@ permalink: "./accueil/index.html"
 {% endblock %}
 
 {% block content %}
-    <div class="c-sitebanner">
-        <img class="c-sitebanner__img" src="/assets/img/page_banners/banner.jpg" alt="site- banner">
-    </div>
+
+    {% include "partials/sitebanner.njk" %}
 
     <main>
-        <div class="l-container centered-text">
-            <h2 class="c-h2">Accueil</h2>
-            <p class="welcome-intro text-intro">Choisissez une rubrique qui vous intéresse et laissez vous emporter par mon univers</p>
+        <div class="c-sitecontent">
+            <div class="l-container centered-text">
+                <h2 class="c-h2">Accueil</h2>
+                <p class="welcome-intro text-intro">Choisissez une rubrique qui vous intéresse et laissez vous emporter par mon univers</p>
 
-            <nav>
-                {% for navitem in nav %}
-                    {% if loop.first %}
-                        <ul class="welcome-nav">
-                    {% else %}
-                        <li>
-                            <a class="welcome-navlink" href="{{ navitem.url }}">{{ navitem.label }}</a>
-                        </li>
-                    {% endif %}
-
-                    {% if loop.last %}
-                        </ul>
-                    {% endif %}
-                {% endfor %}
-            </nav>
+                <nav>
+                    {% for navitem in nav %}
+                        {% if loop.first %}
+                            <ul class="welcome-nav">
+                        {% endif %}
+                            <li>
+                                <a class="welcome-navlink" href="{{ navitem.url }}">{{ navitem.label }}</a>
+                            </li>
+                        {% if loop.last %}
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
+                </nav>
+            </div>
         </div>
     </main>
 {% endblock %}

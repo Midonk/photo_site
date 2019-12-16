@@ -1,7 +1,7 @@
 ---
 title: "Wow le monde part en couille"
 intro: "I'm blue dabedi dabeda, dabediii dabedaaaa dabedidabedaaaa"
-image: "DSC_0357 2.jpg"
+image: "maude_1.jpg"
 modele: "Maude Huwé"
 externalLink: "/galleries/maude/index.html"
 ---

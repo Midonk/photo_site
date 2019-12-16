@@ -8,6 +8,14 @@
     object-fit: cover;
     object-position: top;
 
+    &--grayscale{
+      filter: grayscale(100%);
+      object-position: center;
+      @include mq(medium){
+        object-position: top;
+      }
+    }
+
     @include mq(medium){
       position: fixed;
       top: 0;
@@ -17,6 +25,4 @@
       min-height: 100vh;
     }
   }
-
-
 }

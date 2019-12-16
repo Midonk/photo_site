@@ -1,13 +1,12 @@
-<nav>
+
     {% for navitem in nav %}
         {% if loop.first %}
-            <ul>
+            <ul class="c-sitefooter__nav">
         {% endif %}
-            <li style="{{ "font-weight: 600" if activNavElement == navitem.id }}">
+            <li>
                 <a href="{{ navitem.url }}">{{ navitem.label }}</a>
             </li>
         {% if loop.last %}
             </ul>
         {% endif %}
     {% endfor %}
-</nav>

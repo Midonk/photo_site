@@ -8,11 +8,33 @@ permalink: "./a-propos/index.html"
 {% set activNavElement = "about" %}
 
 {% block content %}
-<div>
-    <div>
-        <img src="../assets/img/page_banners/banner.jpg" alt="Site-banner">
+
+    <div class="c-sitebanner">
+        <img src="/assets/img/page_banners/thomas-finet.jpg"
+             srcset="/assets/img/page_banners/_600xauto/thomas-finet.jpg 600w,
+                     /assets/img/page_banners/_1024xauto/thomas-finet.jpg 1024w,
+                     /assets/img/page_banners/thomas-finet.jpg 1200w"
+             sizes="800px"
+             class="c-sitebanner__img c-sitebanner__img--grayscale"
+             alt="thomas-finet">
     </div>
 
-    machin
-</div>
+    <main>
+        <div class="c-sitecontent">
+            <div class="l-container">
+                <p>Parlons un peu de moi, ça fait du bien à l'égo... Je fais de la photographie sérieusement depuis 2017 Après avoir appris les
+                    bases et le matériel en journalisme, c'est lors de mes études dans le cinéma
+                    que la passion m'a prise.</p>
+                <p>J'aime bien les nouvelles expériences avec de nouvelles personnes, je ne cherche pas à faire de la photographie mon
+                    métier. Il s'agit plus d'un passe temps qui me détends et qui fait voyager.</p>
+
+                {% for el in reseau %}
+                    {% if loop.first %} <ul class="c-contact"> {% endif %}
+                    <li><a class="c-contact__link" href="{{ el.url }}"><img class="o-fluidimage" src="/assets/img/{{ el.image }}" alt="{{
+                            el.name }}: {{ el.identifient }}"></a></li>
+                    {% if loop.last %} </ul> {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </main>
 {% endblock %}

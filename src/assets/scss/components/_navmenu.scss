@@ -6,30 +6,53 @@
   width: 100%;
   height: 100vh;
   padding: pix2rem(30px) pix2rem(24px) ;
-  background-color: red;
+  background-color: $color-brand-main;
   z-index: 999;
 
   transform: translate3d(0, -100vh, 0);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+
+  @include mq(medium){
+    padding: pix2rem(72px) pix2rem(60px);
+  }
+
+  @include mq(large){
+    padding-left: pix2rem(90px);
+    padding-right: pix2rem(90px);
+  }
 }
 
 .c-navmenu__top {
   padding: pix2rem(10px) 0;
-  background-color: yellow;
   text-align: right;
 }
 
 .c-navmenu__close {
   display: inline-block;
-  background-color: green;
-  border: none;
-  padding: pix2rem(10px);
 }
 
 .c-navmenu__content {
-  margin-top: 200px;
+  margin-top: 150px;
+  text-align: right;
 }
 
 .c-navmenu.is-active {
   transform: translate3d(0, 0, 0);
+}
+
+.c-mainnav__link{
+  font-size: pix2rem(18px);
+  font-weight: 300;
+  line-height: div(24, 18);
+  opacity: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: inline-block;
+
+  &--hightlighted{
+    font-weight: 500;
+    color: rgba($color-white, 0.25);
+    pointer-events: none;
+  }
 }

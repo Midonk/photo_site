@@ -7,17 +7,26 @@
 
 {% block content %}
     <div class="c-sitebanner">
-        <img class="c-sitebanner__img" src="/assets/img/page_banners/{{ image }}" alt="{{ title }}">
+        <img src="/assets/img/news_illu/{{ image }}"
+             srcset="/assets/img/news_illu/_600xauto/{{ image }} 600w,
+                             /assets/img/news_illu/_1024xauto/{{ image }} 1024w,
+                             /assets/img/news_illu/{{ image }} 1200w"
+             sizes="800px"
+             class="c-sitebanner__img"
+             alt="{{ title }}-img">
     </div>
 
-    <main class="l-container">
-        <div class="c-news-detail">
-            <div class="c-news-detail__content">
-                <h3 class="c-h3  c-h3--news c-news-detail__title">{{ title }}</h3>
-                {{ content | safe }}
-                <p class="c-news-detail__model">Modèle: {{ modele }}</p>
-                <p class="c-nav-highlight"><a class="c-nav-highlight__link" href="{{ externalLink }}">Voir les photos</a></p>
+    <main>
+        <div class="c-sitecontent">
+            <div class="l-container">
+                <div class="c-news-detail__content">
+                    <h3 class="c-h3  c-h3--news c-news-detail__title">{{ title }}</h3>
+                    {{ content | safe }}
+                    <p class="c-news-detail__model">Modèle: {{ modele }}</p>
+                    <p class="c-nav-highlight"><a class="c-nav-highlight__link" href="{{ externalLink }}">Voir les photos</a></p>
+                </div>
             </div>
         </div>
+
     </main>
 {% endblock %}

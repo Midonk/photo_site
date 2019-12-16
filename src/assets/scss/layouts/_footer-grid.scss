@@ -1,0 +1,29 @@
+.l-footer-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 24px;
+  row-gap: 6px;
+}
+
+.l-footer-grid-copyright{
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+
+  &>p{
+    margin: 0;
+  }
+}
+
+.l-footer-grid-nav{
+  grid-row: 1 / span 2;
+  grid-column: 2 / 3;
+
+  margin-left: auto;
+  text-align: right;
+}
+
+.l-footer-grid-reseau{
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
