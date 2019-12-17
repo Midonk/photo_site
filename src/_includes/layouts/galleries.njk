@@ -11,9 +11,20 @@
 
 {% block content %}
     <main>
-        <div class="">
-            <h1>{{ title }}</h1>
+        <div class=" l-container l-container--full c-sitecontent">
+            <h2 class="c-h2">{{ title }}</h2>
             {{ content | safe }}
+
+            <p>Modèle : {{ model }}</p>
+
+            {% if collab %}
+                <p>Avec :</p>
+                {% for item in collab %}
+                    {% if loop.first %} <ul> {% endif %}
+                    <li><p>{{ item.fullname }} — {{ item.role }}</p></li>
+                    {% if loop.last %} </ul> {% endif %}
+                {% endfor %}
+            {% endif %}
 
             {% for item in images %}
                 {% if loop.first %}
@@ -24,7 +35,7 @@
                          srcset="/assets/img/galleries/_600xauto/{{ item.file }} 600w,
                              /assets/img/galleries/_1024xauto/{{ item.file }} 1024w,
                              /assets/img/galleries/{{ item.file }} 1200w"
-                         sizes="800px"
+                         sizes="100px"
                          class="o-fluidimage"
                          alt="">
                 </li>

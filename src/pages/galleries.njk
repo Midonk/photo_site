@@ -24,8 +24,11 @@ permalink: "./galeries/index.html"
                     {% endif %}
                     <li>
                         <article>
-                            <a href="{{ item.url }}">
-                                <img class="o-fluidimage" src="/assets/img/galleries/_600xauto/{{ item.data.coverImage }}" alt="{{ item.data.title }}">
+                            <a class="" href="{{ item.url }}">
+                                <div class="o-scaling-image">
+                                    <img class="o-fluidimage" src="/assets/img/galleries/_600xauto/{{ item.data.coverImage }}" alt="{{ item
+                                    .data.title }}">
+                                </div>
                                 <h2 class="c-galleries__gallery-title">{{ item.data.title }}</h2>
                             </a>
                             {{ item.templateContent | safe }}
