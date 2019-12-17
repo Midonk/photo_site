@@ -1,4 +1,4 @@
-<div class="c-sitebanner">
+<!--<div class="c-sitebanner">
     <img src="/assets/img/page_banners/_600xauto/banner.jpg"
          srcset="/assets/img/page_banners/_600xauto/banner.jpg 600w,
                              /assets/img/page_banners/_1024xauto/banner.jpg 1024w,
@@ -7,4 +7,18 @@
                 1000px"
          class="c-sitebanner__img"
          alt="site-banner">
+</div>-->
+
+
+<div class="c-sitebanner">
+    <picture>
+       <source media="(min-width: 750px)"
+               srcset="/assets/img/page_banners/_600xauto/banner.jpg 600w,
+                       /assets/img/page_banners/_1024xauto/banner.jpg 1024w,
+                       /assets/img/page_banners/banner.jpg 1200w"
+               sizes="40vw">
+       <img src="/assets/img/page_banners/_600x400/banner.jpg"
+            class="c-sitebanner__img"
+            alt="My super duper banner">
+    </picture>
 </div>
