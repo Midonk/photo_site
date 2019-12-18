@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +7,7 @@
     <title>{{ htmlTitle ~ " - " if htmlTitle }}{{ site.title }}</title>
     <meta type="description" content="{{ htmlDesc if htmlDesc else site.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/main.min.css">
 </head>
 <body class="{{ "l-split-layout" if  activNavElement == "home"}}">
     {% block header %}{% endblock %}

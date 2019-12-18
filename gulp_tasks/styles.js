@@ -11,7 +11,7 @@ function buildSass(){
     return gulp
         .src("./src/assets/scss/main.scss")
         .pipe(sass({outputStyle: 'expanded'}))
-        .pipe(gulp.dest("./dist/assets/css/"))
+        //.pipe(gulp.dest("./dist/assets/css/"))
         .pipe(rename({ suffix: ".min" }))
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(gulp.dest("./dist/assets/css/"));

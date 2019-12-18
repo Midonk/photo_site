@@ -1,6 +1,6 @@
 module.exports = {
-    title: "Super duper photos site",
-    description: "this is the best photo site you'll ever see. Warning, working hamsters included.",
+    title: "Thomas photographie",
+    description: "Site photographique dédié de Thomas Finet, retrouvez ses actualités et ses plus belles photos sur son site.",
     author: "Thomas Finet",
     authorTwitter: "@thomasfinet1",
     buildDate: new Date()

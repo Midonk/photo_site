@@ -38,7 +38,7 @@
 
 .splash-container{
   padding-top: pix2rem(114px);
-  background-image: url("../img/page_banners/kap_cirque.jpg");
+  background-image: url("../img/page_banners/_600xauto/kap_cirque.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
@@ -48,6 +48,10 @@
 
   @include mq(medium){
     padding-top: pix2rem(270px);
+    background-image: url("../img/page_banners/_1024xauto/cha_manu_banner.jpg");
+  }
+
+  @include mq(large){
     background-image: url("../img/page_banners/cha_manu_banner.jpg");
   }
 }
