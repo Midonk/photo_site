@@ -7,7 +7,8 @@ permalink: "./galeries/index.html"
 
 {# set variables #}
 {% set htmlTitle = "Gallerie d'images" %}
-{% set htmlDesc = "Ceci est une description" %}
+{% set htmlDesc = "Découvrez les galleries et différents shooting réalisés par Thomas Finet" %}
+{% set htmlUrl = "/galeries/" %}
 {% set activNavElement = "galleries" %}
 
 {% block content %}
@@ -17,7 +18,7 @@ permalink: "./galeries/index.html"
     <main>
         <div class="c-sitecontent">
             <div class="l-container">
-                <h2 class="c-h2 c-galleries__main-title">Galleries</h2>
+                <h2 class="c-h2 c-galleries__main-title">Galeries</h2>
                 {% for item in collections.galleries %}
                     {% if loop.first %}
                         <ul class="c-galleries__list">
