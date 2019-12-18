@@ -37,9 +37,17 @@
 }
 
 .splash-container{
-  margin-top: pix2rem(114px);
+  padding-top: pix2rem(114px);
+  background-image: url("../img/page_banners/kap_cirque.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: rgba($color-brand-main, 0.5);
+  box-sizing: border-box;
+  min-height: 100vh;
 
   @include mq(medium){
-    margin-top: pix2rem(270px);
+    padding-top: pix2rem(270px);
+    background-image: url("../img/page_banners/cha_manu_banner.jpg");
   }
 }

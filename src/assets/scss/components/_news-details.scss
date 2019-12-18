@@ -38,6 +38,11 @@
   &__model{
     margin-top: pix2rem(12px);
   }
+
+  &__portrait{
+    height: pix2rem(240px);
+    border: solid 1px $color-white;
+  }
 }
 
 .c-nav-highlight{

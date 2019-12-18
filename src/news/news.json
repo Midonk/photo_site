@@ -1,4 +1,5 @@
 {
   "permalink": "/news/{{ page.fileSlug }}/index.html",
+  "desc": "Une actualité, de retour de shooting avec plein de chouette clichés.",
   "layout": "layouts/news.njk"
 }

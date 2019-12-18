@@ -18,27 +18,31 @@ permalink: "./actualites/index.html"
         <div class="c-sitecontent">
             <div class="l-container">
                 <h2 class="c-h2">Actualités</h2>
-                <p class="c-page-intro">Intro Lorem ipsum dolor sit amet, consectetulacus sodales. Vestibulum in
-                    alielit. Praesent dictum fermentum risus, non pellentesque urna sodales vitae. Curabitur pretium
-                    tellus ut ex maximus tristique. Praesent congue varius ultricies. Vestibulum rhoncus metus mauris, a
-                    consectetur tellus venenatis quis.</p>
+                <p class="c-page-intro">Vous voilà arrivé dans une section bien intéressante ! Les actualités regroupent mes activités en tant que
+                    photographe. Dès qu'un nouveau shooting est fait ou que quelque chose d'important se passe, il est mentionné tout en haut de
+                    cette liste. Cliquez pour en savoir un peu plus sur ce qu'il s'est passé et pour voir des photos (vous êtes un peu là pour ça
+                    je suppose)</p>
 
                 {% for news in collections.news %}
                     {% if loop.first %}
                         <ul class="c-news-list">
                     {% endif %}
+                    {% if news.data.published %}
                     <li>
                         <article class="c-news-card">
                             <a class="c-news-card__link" href="{{ news.url }}">
                                 <div class="c-news-card__img-container">
                                     <div class="o-scaling-image c-news-card__img">
-                                        <img src="/assets/img/news_illu/_600xauto/{{ news.data.image }}"
-                                             srcset="/assets/img/news_illu/_600xauto/{{ news.data.image }} 600w,
-                                                 /assets/img/news_illu/_1024xauto/{{ news.data.image }} 1024w,
-                                                 /assets/img/news_illu/{{ news.data.image }} 1200w"
-                                             sizes="800px"
-                                             class="o-fluidimage"
-                                             alt="{{ news.data.title }}-img">
+                                        <picture>
+                                            <source media="(min-width: 750px)"
+                                                    srcset="/assets/img/news_illu/_600xauto/{{ news.data.image }} 600w,
+                                                           /assets/img/news_illu/_1024xauto/{{ news.data.image }} 1024w,
+                                                           /assets/img/news_illu/{{ news.data.image }} 1200w"
+                                                    sizes="800px">
+                                            <img src="/assets/img/news_illu/_600xauto/{{ news.data.image }}"
+                                                 class="o-fluidimage"
+                                                 alt="{{ news.data.title }}-img">
+                                        </picture>
                                     </div>
                                 </div>
                                 <p class="c-news-card__date text-news-date">{{ news.date | dateFormat("DD / MM / YYYY") }}</p>
@@ -46,6 +50,7 @@ permalink: "./actualites/index.html"
                             </a>
                         </article>
                     </li>
+                    {% endif %}
                     {% if loop.last %}</ul>{% endif %}
                 {% endfor %}
             </div>

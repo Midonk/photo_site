@@ -10,13 +10,23 @@ permalink: "./a-propos/index.html"
 {% block content %}
 
     <div class="c-sitebanner">
-        <img src="/assets/img/page_banners/thomas-finet.jpg"
+        {#<img src="/assets/img/page_banners/thomas-finet.jpg"
              srcset="/assets/img/page_banners/_600xauto/thomas-finet.jpg 600w,
                      /assets/img/page_banners/_1024xauto/thomas-finet.jpg 1024w,
                      /assets/img/page_banners/thomas-finet.jpg 1200w"
              sizes="800px"
              class="c-sitebanner__img c-sitebanner__img--grayscale"
-             alt="thomas-finet">
+             alt="thomas-finet">#}
+        <picture>
+            <source media="(min-width: 750px)"
+                    srcset="/assets/img/page_banners/_600xauto/thomas-finet.jpg 600w,
+                       /assets/img/page_banners/_1024xauto/thomas-finet.jpg 1024w,
+                       /assets/img/page_banners/thomas-finet.jpg 1200w"
+                    sizes="40vw">
+            <img src="/assets/img/page_banners/_600x400/thomas-finet.jpg"
+                 class="c-sitebanner__img c-sitebanner__img--grayscale"
+                 alt="thomas-finet">
+        </picture>
     </div>
 
     <main>

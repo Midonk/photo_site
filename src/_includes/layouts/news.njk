@@ -3,17 +3,28 @@
 
 {# set variables #}
 {% set htmlTitle = title %}
-{% set activNavElement = "news" %}
+{% set htmlDesc = desc %}
+{#{% set activNavElement = "news" %}#}
 
 {% block content %}
     <div class="c-sitebanner">
-        <img src="/assets/img/news_illu/{{ image }}"
+        {#<img src="/assets/img/news_illu/{{ image }}"
              srcset="/assets/img/news_illu/_600xauto/{{ image }} 600w,
                              /assets/img/news_illu/_1024xauto/{{ image }} 1024w,
                              /assets/img/news_illu/{{ image }} 1200w"
              sizes="800px"
              class="c-sitebanner__img"
-             alt="{{ title }}-img">
+             alt="{{ title }}-img">#}
+        <picture>
+            <source media="(min-width: 750px)"
+                    srcset="/assets/img/news_illu/_600xauto/{{ image }} 600w,
+                            /assets/img/news_illu/_1024xauto/{{ image }} 1024w,
+                            /assets/img/news_illu/{{ image }} 1200w"
+                    sizes="800px">
+            <img src="/assets/img/news_illu/_600xauto/{{ image }}"
+                 class="c-sitebanner__img"
+                 alt="{{ title }}-img">
+        </picture>
     </div>
 
     <main>
@@ -22,7 +33,14 @@
                 <div class="c-news-detail__content">
                     <h3 class="c-h3  c-h3--news c-news-detail__title">{{ title }}</h3>
                     {{ content | safe }}
+                    {% if modele %}
                     <p class="c-news-detail__model">Modèle: {{ modele }}</p>
+                    {% endif %}
+                    {% if model_portrait %}
+                        <img src="/assets/img/galleries/_600xauto/{{ model_portrait }}"
+                             class="c-news-detail__portrait"
+                             alt="{{ title }}-img">
+                    {% endif %}
                     <p class="c-nav-highlight"><a class="c-nav-highlight__link" href="{{ externalLink }}">Voir les photos</a></p>
                 </div>
             </div>
