@@ -39,7 +39,8 @@ permalink: "./actualites/index.html"
                                                     srcset="/assets/img/news_illu/_600xauto/{{ news.data.image }} 600w,
                                                            /assets/img/news_illu/_1024xauto/{{ news.data.image }} 1024w,
                                                            /assets/img/news_illu/{{ news.data.image }} 1200w"
-                                                    sizes="800px">
+                                                    sizes="(min-width: 750px) 40vw,
+                                                           100vw">
                                             <img src="/assets/img/news_illu/_600xauto/{{ news.data.image }}"
                                                  class="o-fluidimage"
                                                  alt="{{ news.data.title }}-img">

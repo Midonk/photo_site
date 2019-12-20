@@ -17,13 +17,18 @@
             <h2 class="c-h2">{{ title }}</h2>
             {{ content | safe }}
 
-            <p>Modèle : {{ model }}</p>
+            <p class="c-galleries__rubric-title">Modèle :</p>
+            {% for person in model %}
+                {% if loop.first %} <ul> {% endif %}
+                <li class="c-galleries__list-item"><p>- {{ person }}</p></li>
+                {% if loop.last %} </ul> {% endif %}
+            {% endfor %}
 
             {% if collab %}
-                <p>Avec :</p>
+                <p class="c-galleries__rubric-title">Avec :</p>
                 {% for item in collab %}
                     {% if loop.first %} <ul> {% endif %}
-                    <li><p>{{ item.fullname }} — {{ item.role }}</p></li>
+                    <li class="c-galleries__list-item"><p>- {{ item.fullname }} — {{ item.role }}</p></li>
                     {% if loop.last %} </ul> {% endif %}
                 {% endfor %}
             {% endif %}
@@ -32,12 +37,13 @@
                 {% if loop.first %}
                     <ul class="c-photosgrid">
                 {% endif %}
-                <li class="c-photosgrid__item  {{ "c-photosgrid__item--large" if item.format == "portrait" }}">
+                <li class="c-photosgrid__item  {{ "c-photosgrid__item--portrait" if item.format == "portrait" }}">
                     <img src="/assets/img/galleries/_600xauto/{{ item.file }}"
                          srcset="/assets/img/galleries/_600xauto/{{ item.file }} 600w,
                              /assets/img/galleries/_1024xauto/{{ item.file }} 1024w,
                              /assets/img/galleries/{{ item.file }} 1200w"
-                         sizes="100px"
+                         sizes="(min-width: 750px) 40vw,
+                                100vw"
                          class="o-fluidimage"
                          alt="">
                 </li>
