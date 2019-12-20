@@ -15,5 +15,21 @@
 .c-galleries__gallery-title{
   margin-top: pix2rem(24px);
   margin-bottom: pix2rem(12px);
+  line-height: div(30, 27);
+}
+
+.c-galleries__gallery-intro > p{
+  margin: 0;
+}
+
+.c-galleries__list-item{
+  & p{
+    margin-top: 0;
+    margin-bottom: 0px;
+  }
+}
+
+.c-galleries__rubric-title{
+  margin-bottom: pix2rem(6px);
 }
 

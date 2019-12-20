@@ -3,18 +3,12 @@
   height: 100%;
   overflow: hidden;
 
-  &> img{
+  & img{
+    //filter: grayscale(100%);
     transition: all 0.3s ease-in-out;
 
     &:hover{
-      transform: scale3d(1.1, 1.1, 1);
-    }
-  }
-
-  &>picture>img{
-    transition: all 0.3s ease-in-out;
-
-    &:hover{
+      //filter: grayscale(0%);
       transform: scale3d(1.1, 1.1, 1);
     }
   }

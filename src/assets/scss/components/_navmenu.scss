@@ -32,7 +32,9 @@
 }
 
 .c-navmenu__content {
-  margin-top: 150px;
+  padding-top: 10vh;
+  box-sizing: border-box;
+  max-height: 100vh;
   text-align: right;
 }
 
@@ -49,6 +51,16 @@
   padding-bottom: 10px;
   padding-left: 10px;
   display: inline-block;
+
+  @include mq(medium){
+    font-size: pix2rem(48px);
+    line-height: div(64 , 48);
+  }
+
+  @include mq(large){
+    font-size: pix2rem(72px);
+    line-height: div(96 , 72);
+  }
 
   &--hightlighted{
     font-weight: 500;
