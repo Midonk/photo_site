@@ -11,6 +11,13 @@
     "url": "https://www.instagram.com/thomasphotofficiel/",
     "image": "instagram-logo.svg",
     "identifient": "@thomasphotofficiel"
+  },
+
+  {
+    "name": "Mail",
+    "url": "mailto:thomasphotofficiel@gmail.com",
+    "image": "email-logo.svg",
+    "identifient": "thomasphotofficiel@gmail.com"
   }
 ]
 

@@ -27,7 +27,7 @@ function copyFiles(done){
         let patternSrc = dir.src;
         let patternDist = dir.dist;
 
-        // walk array of objkects and for each object found find all files, excluding directories
+        // walk array of objects and for each object found find all files, excluding directories
         let srcFiles = glob.sync(globPattern, {nodir: true});
 
         // walk array and for each source filePath
