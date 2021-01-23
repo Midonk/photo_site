@@ -18,6 +18,13 @@
     "url": "mailto:thomasphotofficiel@gmail.com",
     "image": "email-logo.svg",
     "identifient": "thomasphotofficiel@gmail.com"
+  },
+
+  {
+    "name": "RSS feed",
+    "url": "/feed.xml",
+    "image": "rss-feed-logo.svg",
+    "identifient": "by Thomas Finet"
   }
 ]
 

@@ -10,6 +10,11 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("dateFormat", function(date, format){
         return moment(date).format(format);
     });
+
+    // limit filter
+    eleventyConfig.addFilter("limit", function (array, limit) {
+        return array.slice(0, limit);
+    });
 /*
     eleventyConfig.addFilter("formatName", function(name){
         console.log(name);
@@ -46,6 +51,7 @@ module.exports = function(eleventyConfig) {
         dir: {
             input: "src",
             output: "dist"
-        }
+        },
+        templateFormats: ["njk", "md"]
     };
 };

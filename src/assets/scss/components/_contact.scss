@@ -1,12 +1,17 @@
 .c-contact{
-  margin-top: 42px;
+  //margin-top: 42px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: stretch;
 
   &>li:not(:last-child){
     margin-right: 42px;
+  }
+
+  &>li{
+    margin-top: 42px;
   }
 
   &__link{

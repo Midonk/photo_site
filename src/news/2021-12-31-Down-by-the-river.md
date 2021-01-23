@@ -1,7 +1,7 @@
 ---
-title: "La rivière dela clairière"
+title: "La rivière de la clairière"
 desc: "Shooting en rivière"
-image: "news-04.jpg"
+image: "news-05.jpg"
 published: False
 externalLink: "/galleries/05stephanie_ponsaers/index.html"
 ---

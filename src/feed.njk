@@ -1,0 +1,29 @@
+---
+permalink: feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <language>en</language>
+    <title>{{ site.title }} - News Feed</title>
+    <description>{{ site.description }}</description>
+    <link>{{ site.baseUrl }}</link>
+    <atom:link href="{{ site.baseUrl }}/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>{{ site.buildTime | dateFormat("ddd, D MMMM YYYY HH:mm:ss ZZ") }}</pubDate>
+    <lastBuildDate>{{ site.buildTime | dateFormat("ddd, D MMMM YYYY HH:mm:ss ZZ") }}</lastBuildDate>
+    <generator>Eleventy</generator>
+    {% for news in collections.news | limit(10) %}
+        {% if news.data.published %}
+            <item>
+                <title>{{ news.data.title }}</title>
+                <link>{{ site.baseUrl }}{{ news.url }}</link>
+                <pubDate>{{ news.date | dateFormat("ddd, D MMMM YYYY HH:mm:ss ZZ") }}</pubDate>
+                <guid isPermaLink="true">{{ site.baseUrl }}{{ news.url }}</guid>
+                <description><![CDATA[
+                {{ news.templateContent | safe }}
+                ]]></description>
+            </item>
+        {% endif %}
+    {% endfor %}
+  </channel>
+</rss>

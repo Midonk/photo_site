@@ -10,7 +10,7 @@
             {% for el in reseau %}
                 {% if loop.first %} <ul class="c-contact-footer"> {% endif %}
                 <li><a class="c-contact-footer__link" href="{{ el.url }}"><img class="o-fluidimage" src="/assets/img/{{ el.image }}" alt="{{ el
-                        .name }}: {{ el.identifient }}"></a></li>
+                        .name }} : {{ el.identifient }}"></a></li>
                 {% if loop.last %} </ul> {% endif %}
             {% endfor %}
         </div>
