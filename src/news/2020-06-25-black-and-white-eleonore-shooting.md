@@ -1,6 +1,7 @@
 ---
 title: "Je reprends du service"
 desc: "Maintenant que le confinement est derrière nous, il est temps de ressortir l'appareil."
+modele: "Éléonore Gomrée"
 image: "news-02.jpg"
 published: True
 externalLink: "/galleries/01eleonore/index.html"

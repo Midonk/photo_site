@@ -41,7 +41,7 @@ permalink: "./a-propos/index.html"
                 {% for el in reseau %}
                     {% if loop.first %} <ul class="c-contact"> {% endif %}
                     <li><a class="c-contact__link" href="{{ el.url }}"><img class="o-fluidimage" src="/assets/img/{{ el.image }}" alt="{{
-                            el.name }} : {{ el.identifiant }}"></a></li>
+                            el.name }}{{ " : " ~ el.identifient if el.identifient }}"></a></li>
                     {% if loop.last %} </ul> {% endif %}
                 {% endfor %}
             </div>

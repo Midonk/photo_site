@@ -1,6 +1,7 @@
 ---
 title: "Hiver classy"
-desc: "Une petite sortie hivernale ."
+desc: "Une petite sortie hivernale dans une ambiance classe et élégante."
+modele: "Marie Clerbois"
 image: "news-04.jpg"
 published: True
 externalLink: "/galleries/05marie_clerbois/index.html"

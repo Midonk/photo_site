@@ -1,6 +1,7 @@
 ---
 title: "Chaud sous le soleil"
 desc: "Premier shooting avec Selen sous la chaleur de l'été."
+modele: "Selen Eldogan"
 image: "news-03.jpg"
 published: True
 externalLink: "/galleries/01selen/index.html"

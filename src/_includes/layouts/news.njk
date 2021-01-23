@@ -36,17 +36,16 @@
                     <h3 class="c-h3  c-h3--news c-news-detail__title">{{ title }}</h3>
                     {{ content | safe }}
                     {% if modele %}
-                    <p class="c-news-detail__model">Modèle: {{ modele }}</p>
+                    <p class="c-news-detail__model">Modèle : {{ modele }}</p>
                     {% endif %}
-                    {% if model_portrait %}
+                    {# {% if model_portrait %}
                         <img src="/assets/img/galleries/_600xauto/{{ model_portrait }}"
                              class="c-news-detail__portrait"
                              alt="{{ title }}-img">
-                    {% endif %}
+                    {% endif %} #}
                     <p class="c-nav-highlight"><a class="c-nav-highlight__link" href="{{ externalLink }}">Voir les photos</a></p>
                 </div>
             </div>
         </div>
-
     </main>
 {% endblock %}

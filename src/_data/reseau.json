@@ -24,7 +24,7 @@
     "name": "RSS feed",
     "url": "/feed.xml",
     "image": "rss-feed-logo.svg",
-    "identifient": "by Thomas Finet"
+    "identifient": null
   }
 ]
 

@@ -8,6 +8,13 @@ permalink: feed.xml
     <title>{{ site.title }} - News Feed</title>
     <description>{{ site.description }}</description>
     <link>{{ site.baseUrl }}</link>
+    <category>Photographie</category>
+    <copyright>{{ site.buildDate | dateFormat("YYYY") }} - {{ site.author }}</copyright>
+    <image>
+      <url>{{site.baseUrl + '/assets/img/page_banners/meta_banner.jpg'}}</url>
+      <title>Thomas photography banner</title>
+      <link>{{ site.baseUrl }}</link>
+    </image>
     <atom:link href="{{ site.baseUrl }}/feed.xml" rel="self" type="application/rss+xml" />
     <pubDate>{{ site.buildTime | dateFormat("ddd, D MMMM YYYY HH:mm:ss ZZ") }}</pubDate>
     <lastBuildDate>{{ site.buildTime | dateFormat("ddd, D MMMM YYYY HH:mm:ss ZZ") }}</lastBuildDate>
@@ -18,9 +25,13 @@ permalink: feed.xml
                 <title>{{ news.data.title }}</title>
                 <link>{{ site.baseUrl }}{{ news.url }}</link>
                 <pubDate>{{ news.date | dateFormat("ddd, D MMMM YYYY HH:mm:ss ZZ") }}</pubDate>
+                <category>{{"Shooting" if news.data.modele else "Général"}}</category>
                 <guid isPermaLink="true">{{ site.baseUrl }}{{ news.url }}</guid>
                 <description><![CDATA[
-                {{ news.templateContent | safe }}
+                  <img src="{{site.baseUrl + '/assets/img/news_illu/_600xauto/' + news.data.image}}"
+                  <p>{{ news.data.desc }}</p>
+                  {{ news.templateContent | safe }}
+                  <a href="{{news.data.externalLink}}">Voir les photos</a>
                 ]]></description>
             </item>
         {% endif %}

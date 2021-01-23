@@ -1,11 +1,12 @@
 ---
 title: "La rivière de la clairière"
-desc: "Shooting en rivière"
+desc: "Découvrez ce shooting à l'atmosphère féérique, en plein milieu d'un ruisseau par une belle journée d'été."
+modele: "Stéphanie Ponsaers"
 image: "news-05.jpg"
 published: False
 externalLink: "/galleries/05stephanie_ponsaers/index.html"
 ---
-Une nouvelle petite pause au beau milieu de cette pandémie. Il est important de prendre l'air de temps en temps après tout !
+C'est lors d'une périgrination que j'ai eu la chance de rencontrer une dryade dans le courant d'un ruisseau, les éléments était favorable etl'occasion était trop belle que pour passer à côté de celle-ci.
 
-C'est ainsi que nous sommes sortis, en compagnie de Marie Clerbois au château de Ham-sur-Heure.
+Sans perdre de temps j'ai dégainé mon appareil et pris de ravisant clichés.
 
