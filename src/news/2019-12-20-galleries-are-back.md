@@ -3,6 +3,7 @@ title: "Les galeries sont de retour !"
 desc: "Le transfert des galeries vient de se terminer sur le site"
 image: "news-01.jpg"
 published: True
+externalText: "Voir les photos"
 externalLink: "/galeries/index.html"
 ---
 Nouvelle update ! La plupart des galeries ont été transférées sur le site ! Quelques ajustement ont également été effectués sur la mise en forme 

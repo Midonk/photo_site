@@ -4,6 +4,7 @@ desc: "Premier shooting avec Selen sous la chaleur de l'été."
 modele: "Selen Eldogan"
 image: "news-03.jpg"
 published: True
+externalText: "Voir les photos"
 externalLink: "/galleries/01selen/index.html"
 ---
 Le temps nous avait bien fait comprendre ce jour là que nous étions en été. Nous frisions les 30°C et courir à gauche ou à droite pour avoir les 

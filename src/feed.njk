@@ -4,14 +4,15 @@ permalink: feed.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <language>en</language>
+    <language>fr</language>
     <title>{{ site.title }} - News Feed</title>
     <description>{{ site.description }}</description>
     <link>{{ site.baseUrl }}</link>
+    <atom:link href="https://halisavakis.com/feed/" rel="self" type="application/rss+xml" />
     <category>Photographie</category>
     <copyright>{{ site.buildDate | dateFormat("YYYY") }} - {{ site.author }}</copyright>
     <image>
-      <url>{{site.baseUrl + '/assets/img/page_banners/meta_banner.jpg'}}</url>
+      <url>{{site.baseUrl + '/assets/img/page_banners/_600xauto/meta_banner.jpg'}}</url>
       <title>Thomas photography banner</title>
       <link>{{ site.baseUrl }}</link>
     </image>
@@ -30,9 +31,10 @@ permalink: feed.xml
                 <description><![CDATA[
                   <img src="{{site.baseUrl + '/assets/img/news_illu/_600xauto/' + news.data.image}}"
                   <p>{{ news.data.desc }}</p>
-                  {{ news.templateContent | safe }}
-                  <a href="{{news.data.externalLink}}">Voir les photos</a>
+                  <p>{{ news.templateContent | safe }}</p>
+                  <p><a href="{{news.data.externalLink}}">Voir les photos</a></p>
                 ]]></description>
+                <author>thomasphotofficiel@gmail.com‎ (Thomas Finet)</author>
             </item>
         {% endif %}
     {% endfor %}

@@ -4,6 +4,7 @@ desc: "Maintenant que le confinement est derrière nous, il est temps de ressort
 modele: "Éléonore Gomrée"
 image: "news-02.jpg"
 published: True
+externalText: "Voir les photos"
 externalLink: "/galleries/01eleonore/index.html"
 ---
 Ça faisait un bail que je ne vous avais pas donné de nouvelle hein ? Entre la fin d’année 2019, les examens de 2020, la pandémie et le confinement, autant vous dire que les shootings me manquaient !
