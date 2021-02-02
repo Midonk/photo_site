@@ -1,5 +1,5 @@
 ---
-title: "Hiver classy"
+title: "Classe en toutes circonstances"
 desc: "Une petite sortie hivernale dans une ambiance classe et élégante."
 modele: "Marie Clerbois"
 image: "news-04.jpg"
