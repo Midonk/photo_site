@@ -38,12 +38,29 @@
                     {% if modele %}
                     <p class="c-news-detail__model">Modèle : {{ modele }}</p>
                     {% endif %}
-                    {# {% if model_portrait %}
-                        <img src="/assets/img/galleries/_600xauto/{{ model_portrait }}"
-                             class="c-news-detail__portrait"
-                             alt="{{ title }}-img">
-                    {% endif %} #}
-                    <p class="c-nav-highlight"><a class="c-nav-highlight__link" href="{{ externalLink }}">{{externalText}}</a></p>
+                    
+                    {% if externalLink %}
+                        <p class="c-nav-highlight"><a class="c-nav-highlight__link" href="{{ externalLink }}">{{externalText}}</a></p>
+                    {% endif %}
+                    
+                    {% for item in ctx %}
+                        {% if loop.first %}
+                            <ul class="c-photosgrid">
+                        {% endif %}
+                            <li class="c-photosgrid__item  {{ "c-photosgrid__item--portrait" if item.format == "portrait" }}">
+                                <img src="/assets/img/ctx/_600xauto/{{ item.file }}"
+                                    srcset="/assets/img/ctx/_600xauto/{{ item.file }} 600w,
+                                        /assets/img/ctx/_1024xauto/{{ item.file }} 1024w,
+                                        /assets/img/ctx/{{ item.file }} 1200w"
+                                    sizes="(min-width: 750px) 40vw,
+                                            100vw"
+                                    class="o-fluidimage"
+                                    alt="{{ item.file }}">
+                            </li>
+                        {% if loop.last %}
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>

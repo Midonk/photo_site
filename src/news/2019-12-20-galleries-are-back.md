@@ -5,6 +5,13 @@ image: "news-01.jpg"
 published: True
 externalText: "Voir les photos"
 externalLink: "/galeries/index.html"
+
+tags:
+- "général"
+- "info"
+- "galeries"
+- "site"
+
 ---
 Nouvelle update ! La plupart des galeries ont été transférées sur le site ! Quelques ajustement ont également été effectués sur la mise en forme 
 des galeries et de la navigation. 

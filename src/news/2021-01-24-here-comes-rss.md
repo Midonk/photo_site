@@ -5,6 +5,13 @@ image: "news-06.jpg"
 published: True
 externalText: "Obtenir le lien RSS"
 externalLink: "/feed.xml"
+
+tags:
+- "général"
+- "technique"
+- "lien"
+- "RSS"
+- "actualité"
 ---
 Imaginez un outil vous permettant de suivre mes actualités autrement que sur Facebook, un outil qui vous permettrait de partager plus facilement les nouveaux contenus de ce site.
 

@@ -28,6 +28,20 @@ const transforms = [
         }
     },
     {
+        src: "src/assets/img/ctx",
+        dist: "dist/assets/img/ctx/_600xauto",
+        options: {
+            width: 600
+        }
+    },
+    {
+        src: "src/assets/img/ctx",
+        dist: "dist/assets/img/ctx/_1024xauto",
+        options: {
+            width: 1024
+        }
+    },
+    {
         src: "src/assets/img/news_illu",
         dist: "dist/assets/img/news_illu/_600xauto",
         options: {

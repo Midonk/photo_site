@@ -6,6 +6,18 @@ image: "news-07.jpg"
 published: True
 externalText: "Voir les photos"
 externalLink: "/galleries/06stephanie_ponsaers/index.html"
+
+tags:
+- "shooting"
+- "château"
+- "hiver"
+- "frais"
+- "lumineux"
+- "rousse"
+- "violet"
+- "pendentif"
+- "Stéphanie"
+
 ---
 Pas de neige mais une température qui nous rappelait de nous couvrir pour sortir ce matin là. 
 Un matin ensoleillé en plein centre de la Belgique au Château de la Hulpe.

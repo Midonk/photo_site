@@ -8,7 +8,6 @@ permalink: feed.xml
     <title>{{ site.title }} - News Feed</title>
     <description>{{ site.description }}</description>
     <link>{{ site.baseUrl }}</link>
-    <atom:link href="https://halisavakis.com/feed/" rel="self" type="application/rss+xml" />
     <category>Photographie</category>
     <copyright>{{ site.buildDate | dateFormat("YYYY") }} - {{ site.author }}</copyright>
     <image>
@@ -26,7 +25,9 @@ permalink: feed.xml
                 <title>{{ news.data.title }}</title>
                 <link>{{ site.baseUrl }}{{ news.url }}</link>
                 <pubDate>{{ news.date | dateFormat("ddd, D MMMM YYYY HH:mm:ss ZZ") }}</pubDate>
-                <category>{{"Shooting" if news.data.modele else "Général"}}</category>
+                {% for tag in news.data.tags %}
+                <category><![CDATA[{{tag}}]]></category>
+                {% endfor %}
                 <guid isPermaLink="true">{{ site.baseUrl }}{{ news.url }}</guid>
                 <description><![CDATA[
                   <img src="{{site.baseUrl + '/assets/img/news_illu/_600xauto/' + news.data.image}}"

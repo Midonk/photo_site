@@ -6,6 +6,16 @@ image: "news-02.jpg"
 published: True
 externalText: "Voir les photos"
 externalLink: "/galleries/01eleonore/index.html"
+
+tags:
+- "shooting"
+- "automne"
+- "nuit"
+- "noir et blanc"
+- "sombre"
+- "noir"
+- "Éléonore"
+
 ---
 Ça faisait un bail que je ne vous avais pas donné de nouvelle hein ? Entre la fin d’année 2019, les examens de 2020, la pandémie et le confinement, autant vous dire que les shootings me manquaient !
 

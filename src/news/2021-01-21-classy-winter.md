@@ -6,6 +6,19 @@ image: "news-04.jpg"
 published: True
 externalText: "Voir les photos"
 externalLink: "/galleries/05marie_clerbois/index.html"
+
+tags:
+- "shooting"
+- "neige"
+- "château"
+- "hiver"
+- "froid"
+- "classe"
+- "brune"
+- "fourure"
+- "feutre"
+- "Marie"
+
 ---
 Une nouvelle petite pause au beau milieu de cette pandémie. Il est important de prendre l'air de temps en temps après tout !
 

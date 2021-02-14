@@ -37,16 +37,16 @@
                 {% if loop.first %}
                     <ul class="c-photosgrid">
                 {% endif %}
-                <li class="c-photosgrid__item  {{ "c-photosgrid__item--portrait" if item.format == "portrait" }}">
-                    <img src="/assets/img/galleries/_600xauto/{{ item.file }}"
-                         srcset="/assets/img/galleries/_600xauto/{{ item.file }} 600w,
-                             /assets/img/galleries/_1024xauto/{{ item.file }} 1024w,
-                             /assets/img/galleries/{{ item.file }} 1200w"
-                         sizes="(min-width: 750px) 40vw,
-                                100vw"
-                         class="o-fluidimage"
-                         alt="">
-                </li>
+                    <li class="c-photosgrid__item  {{ "c-photosgrid__item--portrait" if item.format == "portrait" }}">
+                        <img src="/assets/img/galleries/_600xauto/{{ item.file }}"
+                            srcset="/assets/img/galleries/_600xauto/{{ item.file }} 600w,
+                                /assets/img/galleries/_1024xauto/{{ item.file }} 1024w,
+                                /assets/img/galleries/{{ item.file }} 1200w"
+                            sizes="(min-width: 750px) 40vw,
+                                    100vw"
+                            class="o-fluidimage"
+                            alt="">
+                    </li>
                 {% if loop.last %}
                     </ul>
                 {% endif %}
