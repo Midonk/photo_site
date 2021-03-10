@@ -3,7 +3,7 @@ title: "La rivière de la clairière"
 desc: "Découvrez ce shooting à l'atmosphère féérique, en plein milieu d'un ruisseau par une belle journée d'été."
 modele: "Stéphanie Ponsaers"
 image: "news-05.jpg"
-published: False
+published: True
 externalText: "Voir les photos"
 externalLink: "/galleries/05stephanie_ponsaers/index.html"
 
