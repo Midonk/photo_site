@@ -21,7 +21,7 @@ tags:
 - "Stéphanie"
 
 ---
-C'est lors d'une périgrination que j'ai eu la chance de rencontrer une dryade dans le courant d'un ruisseau, les éléments était favorable etl'occasion était trop belle que pour passer à côté de celle-ci.
+C'est lors d'une périgrination que j'ai eu la chance de rencontrer une dryade dans le courant d'un ruisseau, les éléments étaient favorables et l'occasion était trop belle que pour passer à côté de celle-ci.
 
-Sans perdre de temps j'ai dégainé mon appareil et pris de ravisant clichés.
+Sans perdre de temps j'ai dégainé mon appareil et pris de ravisants clichés.
 
