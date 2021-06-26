@@ -1,5 +1,9 @@
 ---
-permalink: "./galeries/index.html"
+pagination:
+    data: collections.galleries
+    size: 12
+    alias: galleries
+permalink: "./galeries/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
 
 {# layouts extend #}
@@ -19,7 +23,7 @@ permalink: "./galeries/index.html"
         <div class="c-sitecontent">
             <div class="l-container">
                 <h2 class="c-h2 c-galleries__main-title">Galeries</h2>
-                {% for item in collections.galleries %}
+                {% for item in galleries %}
                     {% if loop.first %}
                         <ul class="c-galleries__list">
                     {% endif %}
@@ -39,6 +43,27 @@ permalink: "./galeries/index.html"
                         </ul>
                     {% endif %}
                 {% endfor %}
+                <nav aria-labelledby="my-pagination">
+                    <ul>
+                        {% if pagination.href.previous %}
+                        <li>
+                            <a href="{{ pagination.href.previous }}">Previous</a>
+                        </li>
+                        {% endif %}
+
+                        {% for pageEntry in pagination.pages %}
+                        <li>
+                            <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %}{# set highlight class #}{% endif %}>{{ loop.index }}</a>
+                        </li>
+                        {% endfor %}
+
+                        {% if pagination.href.next %}
+                        <li>
+                            <a href="{{ pagination.href.next }}">Next</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
             </div>
         </div>
     </main>
