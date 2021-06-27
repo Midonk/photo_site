@@ -1,0 +1,29 @@
+{% macro paginationNav(pagination, url, marginType) %}
+
+<nav>
+    <ul class="c-paginationNav {% if marginType == 'top' %} c-paginationNav--top {% else %} c-paginationNav--down {% endif %}">
+    {% if pagination.href.previous %}
+        <li class="c-paginationNav__item">
+            <a class="c-paginationNav__link round-border--3" href="{{ pagination.href.previous }}">Previous</a>
+        </li>
+    {% endif %}
+
+    {% for pageLink in pagination.hrefs %}
+        <li class="c-paginationNav__item">
+        {% if url == pagination.hrefs[ loop.index0 ] %}
+            <p  class=" c-paginationNav__link round-border--3 c-paginationNav__item--highlighted">{{ loop.index }}</p>
+        {% else %}
+            <a class="c-paginationNav__link round-border--3" href="{{ pagination.hrefs[ loop.index0 ] }}">{{ loop.index }}</a>
+        {% endif %}
+        </li>
+    {% endfor %}
+
+    {% if pagination.href.next %}
+    <li class="c-paginationNav__item">
+        <a class="c-paginationNav__link round-border--3" href="{{ pagination.href.next }}">Next</a>
+    </li>
+    {% endif %}
+    </ul>
+</nav>
+
+{% endmacro %}

@@ -63,5 +63,13 @@
       font-style: normal;
       line-height: div(24, 16);
     }
+
+    &-ctx-autor{
+      font-family: $fontstack-main;
+      font-size: pix2rem(16px);
+      font-weight: 400;
+      font-style: normal;
+      line-height: div(24, 16);
+    }
   }
 }

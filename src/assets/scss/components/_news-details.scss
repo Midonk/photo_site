@@ -27,9 +27,9 @@
     margin-bottom: 1rem;
   }
 
-  &__content {
-    /**/
-  }
+/*   &__content {
+    
+  } */
 
   &__title{
     margin-bottom: pix2rem(24px);
@@ -43,6 +43,29 @@
     height: pix2rem(240px);
     border: solid 1px $color-white;
   }
+
+  &__ctx-autor{
+    margin-top: -26px;
+    margin-right: 22.06%;
+    margin-left: 2%;
+  }
+  
+  &__ctx-item{
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: calc(100% - 30px);
+      width: 66%;
+      height: pix2rem(30px);
+      background-color: $color-brand-main;
+    }
+
+  }
+  
+
 }
 
 .c-nav-highlight{

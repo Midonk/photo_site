@@ -1,0 +1,36 @@
+.c-paginationNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    &--top{
+        margin-top: pix2rem(48px);
+    }
+
+    &--down{
+        margin-bottom: pix2rem(24px);
+    }
+}
+
+.c-paginationNav__item:not(:last-child){
+    margin-right: pix2rem(6px);
+}
+
+.c-paginationNav__link{
+    padding: pix2rem(12px);
+    background-color: $color-brand-lighter;
+}
+
+
+.c-paginationNav__item--highlighted{
+    font-family: $fontstack-main;
+    font-size: pix2rem(16px);
+    font-weight: 600;
+    font-style: normal;
+    line-height: div(18, 16);
+    text-decoration: underline;
+
+    opacity: 0.5;
+}

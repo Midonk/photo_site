@@ -36,19 +36,20 @@
                     <h3 class="c-h3  c-h3--news c-news-detail__title">{{ title }}</h3>
                     {{ content | safe }}
                     {% if modele %}
-                    <p class="c-news-detail__model">Modèle : {{ modele }}</p>
+                        <p class="c-news-detail__model">Modèle : {{ modele }}</p>
                     {% endif %}
                     
                     {% if externalLink %}
-                        <p class="c-nav-highlight"><a class="c-nav-highlight__link" href="{{ externalLink }}">{{externalText}}</a></p>
+                        <p class="c-nav-highlight round-border--3"><a class="c-nav-highlight__link" href="{{ externalLink }}">{{externalText}}</a></p>
                     {% endif %}
                     
                     {% for item in ctx %}
-                        {% if loop.first %}
-                            <ul class="c-photosgrid">
-                        {% endif %}
-                            <li class="c-photosgrid__item  {{ "c-photosgrid__item--portrait" if item.format == "portrait" }}">
-                                <img src="/assets/img/ctx/_600xauto/{{ item.file }}"
+                    {% if loop.first %}
+                        <ul class="c-photosgrid">
+                    {% endif %}
+                            <li class="c-photosgrid__item {{ "c-photosgrid__item--portrait" if item.format == "portrait" }}">
+                                <div class="c-news-detail__ctx-item">
+                                    <img src="/assets/img/ctx/_600xauto/{{ item.file }}"
                                     srcset="/assets/img/ctx/_600xauto/{{ item.file }} 600w,
                                         /assets/img/ctx/_1024xauto/{{ item.file }} 1024w,
                                         /assets/img/ctx/{{ item.file }} 1200w"
@@ -56,10 +57,15 @@
                                             100vw"
                                     class="o-fluidimage"
                                     alt="{{ item.file }}">
+                                </div>
+
+                            {% if item.autor %}
+                                <p class="c-news-detail__ctx-autor text-news-ctx-autor">&copy; {{ item.autor }}</p>
+                            {% endif %}
                             </li>
-                        {% if loop.last %}
-                            </ul>
-                        {% endif %}
+                    {% if loop.last %}
+                        </ul>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>

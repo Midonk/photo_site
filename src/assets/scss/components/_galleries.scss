@@ -4,7 +4,13 @@
   grid-gap: 24px;
 
   & > li:not(:last-child){
-    //margin-bottom:pix2rem(42px);
+    margin-bottom:pix2rem(18px);
+  }
+
+  @include mq(medium){
+    & > li:not(:last-child){
+      margin-bottom:pix2rem(12px);
+    }
   }
 }
 

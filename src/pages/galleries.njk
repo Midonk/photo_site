@@ -3,8 +3,11 @@ pagination:
     data: collections.galleries
     size: 12
     alias: galleries
-permalink: "./galeries/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
+permalink: "./galeries/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 ---
+
+{# import macros #}
+{% from '../macros/pagination.njk' import paginationNav %}
 
 {# layouts extend #}
 {% extends "layouts/base.njk" %}
@@ -23,14 +26,16 @@ permalink: "./galeries/{% if pagination.pageNumber > 0 %}page-{{ pagination.page
         <div class="c-sitecontent">
             <div class="l-container">
                 <h2 class="c-h2 c-galleries__main-title">Galeries</h2>
+                {{ paginationNav(pagination, page.url, 'bottom') }}
+
                 {% for item in galleries %}
-                    {% if loop.first %}
-                        <ul class="c-galleries__list">
-                    {% endif %}
+                {% if loop.first %}
+                    <ul class="c-galleries__list">
+                {% endif %}
                     <li>
                         <article>
                             <a class="" href="{{ item.url }}">
-                                <div class="o-scaling-image">
+                                <div class="o-scaling-image round-border--5">
                                     <img class="o-fluidimage" src="/assets/img/galleries/_600xauto/{{ item.data.coverImage }}" alt="{{ item
                                     .data.title }}">
                                 </div>
@@ -39,31 +44,12 @@ permalink: "./galeries/{% if pagination.pageNumber > 0 %}page-{{ pagination.page
                             <div class="c-galleries__gallery-intro">{{ item.templateContent | safe }}</div>
                         </article>
                     </li>
-                    {% if loop.last %}
-                        </ul>
-                    {% endif %}
-                {% endfor %}
-                <nav aria-labelledby="my-pagination">
-                    <ul>
-                        {% if pagination.href.previous %}
-                        <li>
-                            <a href="{{ pagination.href.previous }}">Previous</a>
-                        </li>
-                        {% endif %}
-
-                        {% for pageEntry in pagination.pages %}
-                        <li>
-                            <a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %}{# set highlight class #}{% endif %}>{{ loop.index }}</a>
-                        </li>
-                        {% endfor %}
-
-                        {% if pagination.href.next %}
-                        <li>
-                            <a href="{{ pagination.href.next }}">Next</a>
-                        </li>
-                        {% endif %}
+                {% if loop.last %}
                     </ul>
-                </nav>
+                {% endif %}
+                {% endfor %}
+
+                {{ paginationNav(pagination, page.url, 'top') }}
             </div>
         </div>
     </main>
