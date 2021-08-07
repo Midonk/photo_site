@@ -75,12 +75,12 @@
     width: 100%;
     padding: pix2rem(6px) pix2rem(18px);
     box-sizing: border-box;
-    background-color: $color-brand-darker;
+    background-color: $color-brand-lighter;
 
     font-size: pix2rem(14px);
     line-height: div(14, 24);
 
-    opacity: 0.75;
+    opacity: 1;
   }
 }
 
