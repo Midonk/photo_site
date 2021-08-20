@@ -2,9 +2,15 @@
     <p class="c-navmenu__top"><a class="c-navmenu__close js-toggle-menu" href=""><img src="/assets/img/closenav.svg" alt="close"></a></p>
     <nav class="c-navmenu__content">
         {% for navitem in nav %}
-            {% if loop.first %} <ul> {% endif %}
-            <li class="c-mainnav__item"><a class="c-mainnav__link {{ "c-mainnav__link--hightlighted" if activNavElement == navitem.id }}" href="{{ navitem.url }}">{{ navitem.label }}</a></li>
-            {% if loop.last %} </ul> {% endif %}
+            {% if loop.first %} 
+            <ul> 
+                {% endif %}
+                <li class="c-mainnav__item">
+                    <a class="c-mainnav__link {{ "c-mainnav__link--hightlighted" if activNavElement == navitem.id }}" href="{{ navitem.url }}">{{ navitem.label }}</a>
+                </li>
+                {% if loop.last %} 
+            </ul> 
+            {% endif %}
         {% endfor %}
     </nav>
 </div>
