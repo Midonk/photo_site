@@ -31,7 +31,7 @@ tags:
 ---
 On ne peut pas affirmer que cette année aura été généreuse sur la météo.
 
-Avant cette période quelque peu humide qu'a été notre été, nous nous somme trouvés
+Avant cette période quelque peu humide qu'a été notre été, nous nous sommes trouvés
 un jour au sec pour sortir faire un petit tour.
 
 Je me suis essayé à un autre type de rendu pour ce tirage, il semblerait que ça ait plu.
