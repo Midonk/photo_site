@@ -1,54 +1,48 @@
 {
-  "name": "tooling",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "browserslist": [
-    "last 2 versions",
-    "not ie <= 11"
-  ],
+  "name": "photo_site",
+  "version": "2.0.0",
+  "description": "Thomas Finet photo site",
+  "main": ".eleventy.js",
   "scripts": {
-    "build:11ty": "npx eleventy --quiet",
-    "build:sass": "node-sass ./src/assets/scss/main.scss ./dist/assets/css/main.css --output-style compressed",
-    "build:js": "webpack --config webppackConfig.js",
-    "build:img": "imagemin ./src/assets/img/**/* --out-dir ./src/assets/img",
-    "del:dist": "del-cli ./dist",
-    "build": "npm-run-all del:dist build:img -p build:11ty build:sass build:js",
-    "watch:sass": "onchange ./src/assets/scss/**/* -- npm run build:sass",
-    "watch:11ty": "onchange ./src/**/* -e ./src/assets/scss/**/* -- npm run build:11ty",
-    "serve": "browser-sync start --server dist --files \"dist/**/*\"",
-    "watch": "npm-run-all build -p serve watch:**"
+    "test": "grunt watch"
   },
-  "keywords": [],
-  "author": "TF",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Midonk/photo_site.git"
+  },
+  "keywords": [
+    "photo",
+    "site"
+  ],
+  "author": "Thomas Finet",
   "license": "ISC",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "@babel/core": "^7.13.10",
-    "@babel/preset-env": "^7.13.10",
-    "autoprefixer": "^9.8.6",
-    "babel-loader": "^8.2.2",
-    "browser-sync": "^2.26.14",
-    "cssnano": "^4.1.10",
-    "del": "^5.1.0",
-    "del-cli": "^3.0.1",
-    "dotenv": "^8.2.0",
-    "glob": "^7.1.6",
-    "gulp": "^4.0.2",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.1.1",
-    "imagemin-cli": "^6.0.0",
-    "moment": "^2.29.1",
-    "node-sass": "^4.14.1",
-    "npm-run-all": "^4.1.5",
-    "onchange": "^6.1.1",
-    "pug": "^3.0.2",
-    "sharp": "^0.23.4",
-    "webpack": "^5.24.4",
-    "webpack-cli": "^3.3.12"
+  "bugs": {
+    "url": "https://github.com/Midonk/photo_site/issues"
   },
-  "dependencies": {
-    "eleventy": "^1.0.6"
+  "homepage": "https://github.com/Midonk/photo_site#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.11",
+    "del": "^6.1.1",
+    "del-cli": "^4.0.1",
+    "dotenv": "^16.0.1",
+    "glob": "^8.0.3",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "imagemin-cli": "^7.0.0",
+    "moment": "^2.29.3",
+    "node-sass": "^7.0.1",
+    "onchange": "^7.1.0",
+    "pug": "^3.0.2",
+    "sharp": "^0.30.6",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2"
   }
 }
