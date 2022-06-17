@@ -31,8 +31,6 @@ images:
   format: "landscape"
 - file: "01aline_detimmerman_13.jpg"
   format: "landscape"
-- file: "01aline_detimmerman_14.jpg"
-  format: "portrait"
 - file: "01aline_detimmerman_15.jpg"
   format: "portrait"
 ---
