@@ -1,8 +1,11 @@
 ---
 title: "Hiver classy"
+published: True
 coverImage: "05_marie_clerbois_19.jpg"
+
 model: 
 - "Marie Clerbois"
+
 images:
 - file: "05_marie_clerbois_0.jpg"
   format: "portrait"

@@ -1,8 +1,11 @@
 ---
 title: "Dryade d'été"
+published: True
 coverImage: "05_stephanie_ponsaers_19.jpg"
+
 model: 
 - "Stéphanie Ponsaers"
+
 images:
 - file: "05_stephanie_ponsaers_0.jpg"
   format: "portrait"

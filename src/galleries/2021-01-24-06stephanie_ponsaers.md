@@ -1,8 +1,11 @@
 ---
 title: "Balade au frais"
+published: True
 coverImage: "06_stephanie_ponsaers_19.jpg"
+
 model: 
 - "Stéphanie Ponsaers"
+
 images:
 - file: "06_stephanie_ponsaers_0.jpg"
   format: "portrait"

@@ -32,6 +32,7 @@ permalink: "./galeries/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumbe
                 {% if loop.first %}
                     <ul class="c-galleries__list">
                 {% endif %}
+                {% if item.data.published %}
                     <li>
                         <article>
                             <a class="" href="{{ item.url }}">
@@ -44,6 +45,7 @@ permalink: "./galeries/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumbe
                             <div class="c-galleries__gallery-intro">{{ item.templateContent | safe }}</div>
                         </article>
                     </li>
+                {% endif %}
                 {% if loop.last %}
                     </ul>
                 {% endif %}

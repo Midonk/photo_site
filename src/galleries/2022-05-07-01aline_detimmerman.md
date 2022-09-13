@@ -1,6 +1,8 @@
 ---
 title: "En rouge et noir"
+published: True
 coverImage: "01aline_detimmerman_9.jpg"
+
 model: 
 - "Aline Detimmerman"
 
