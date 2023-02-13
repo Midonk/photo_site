@@ -1,6 +1,6 @@
 ---
 title: "En rouge et noir"
-desc: ""
+desc: "Un shooting mélancolique dans les ruines d'une abbaye"
 modele: "Aline Detimmerman"
 image: "news-11.jpg"
 published: True
